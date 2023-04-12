@@ -1,4 +1,4 @@
-export const clubs_seriea = [
+export const serie_a = [
     {
         id: 1,
         name: 'AC Milan',

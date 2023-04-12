@@ -1,4 +1,4 @@
-export const clubs_laliga = [
+export const laliga = [
     {
         id: 1,
         name: 'Almería',

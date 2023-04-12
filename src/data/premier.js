@@ -1,4 +1,4 @@
-export const clubs_EN = [
+export const premier_league = [
     {
         id: 1,
         name: 'Arsenal',

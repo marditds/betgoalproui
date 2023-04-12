@@ -1,4 +1,4 @@
-export const clubs_bundesliga = [
+export const bundesliga = [
     {
         id: 1,
         name: "B. M'gladbach",

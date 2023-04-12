@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Accordion } from 'react-bootstrap'
 import { Scoreboard_Club } from './Scoreboard_Club'
-import { useParams } from 'react-router-dom'
+import { Club } from './Club'
+import { useParams, Link } from 'react-router-dom'
 import { leagues } from '../data/leagues'
 
 export const League = () => {
@@ -12,9 +13,31 @@ export const League = () => {
 
     console.log(league.name);
 
+    console.log(league.clubs);
+
     return (
         <Container>
             <Scoreboard_Club leagueName={league.name} />
+
+            {/* TEAM'S LIST HERE */}
+            <Accordion>
+                <Accordion.Item eventKey="0">
+                    <Accordion.Header>{league.name} Clubs</Accordion.Header>
+                    <Accordion.Body>
+                        {league.clubs.map((club) => {
+                            return (
+                                <div key={club.id}>
+                                    {/* <Link to={club.alias} > */}
+                                    {club.name}
+                                    {/* </Link> */}
+                                </div>
+                            )
+                        })}
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+
+
         </Container>
     )
 }

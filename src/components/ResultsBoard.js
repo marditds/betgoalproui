@@ -6,7 +6,9 @@ export const ResultsBoard = () => {
         <>
             <Row>
                 <Col className='text-center'>
-                    <h1>Results</h1>
+                    <h1 style={{ color: "white" }}>
+                        Results
+                    </h1>
                 </Col>
             </Row>
 
