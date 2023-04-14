@@ -6,8 +6,8 @@ import { ResultsBoard } from './ResultsBoard'
 export const Home = () => {
     return (
         <Container>
-            <Row>
-                <Col lg={3} md={4} className='d-md-block d-none'>
+            <Row className='d-flex flex-column'>
+                <Col>
                     <Leagues />
                 </Col>
 

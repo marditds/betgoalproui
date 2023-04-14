@@ -1,0 +1,8 @@
+.club--logo {
+    aspect-ratio: 2/1;
+    object-fit: contain;
+}
+
+.club--body {
+    /* height: 100vh; */
+}

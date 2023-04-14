@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Accordion } from 'react-bootstrap'
+import { Container, Accordion, Image } from 'react-bootstrap'
 import { Scoreboard_Club } from './Scoreboard_Club'
 import { Club } from './Club'
 import { useParams, Link } from 'react-router-dom'
@@ -16,28 +16,30 @@ export const League = () => {
     console.log(league.clubs);
 
     return (
-        <Container>
-            <Scoreboard_Club leagueName={league.name} />
+        <Container fluid className='club--body'>
+            <Container>
+                <Scoreboard_Club leagueName={league.name} leagueLogo={league.logo} />
 
-            {/* TEAM'S LIST HERE */}
-            <Accordion>
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header>{league.name} Clubs</Accordion.Header>
-                    <Accordion.Body>
-                        {league.clubs.map((club) => {
-                            return (
-                                <div key={club.id}>
-                                    {/* <Link to={club.alias} > */}
-                                    {club.name}
-                                    {/* </Link> */}
-                                </div>
-                            )
-                        })}
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
+                {/* TEAM'S LIST HERE */}
+                <Accordion>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>{league.name} Clubs</Accordion.Header>
+                        <Accordion.Body>
+                            {league.clubs.map((club) => {
+                                return (
+                                    <div key={club.id}>
+                                        {/* <Link to={club.alias} > */}
+                                        {club.name}
+                                        {/* </Link> */}
+                                    </div>
+                                )
+                            })}
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
 
 
+            </Container>
         </Container>
     )
 }

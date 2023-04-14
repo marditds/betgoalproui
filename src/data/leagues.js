@@ -1,8 +1,10 @@
+export const logos = require.context('../assets', true);
 export const leagues = [
     {
         id: 1,
         alias: "Serie_A",
         name: "SerieA",
+        logo: logos("./seriea.png"),
         clubs: [
             {
                 id: 1,
@@ -110,6 +112,7 @@ export const leagues = [
         id: 2,
         alias: "Bundesliga",
         name: "Bundesliga",
+        logo: logos("./bundesliga.png"),
         clubs: [
             {
                 id: 1,
@@ -208,6 +211,7 @@ export const leagues = [
         id: 3,
         alias: "Premier_League",
         name: "Premier League",
+        logo: logos("./premier.png"),
         clubs: [{
             id: 1,
             name: 'Arsenal',
@@ -312,6 +316,7 @@ export const leagues = [
         id: 4,
         alias: "LaLiga",
         name: "LaLiga",
+        logo: logos("./laliga.png"),
         clubs: [
             {
                 id: 1,
@@ -419,6 +424,7 @@ export const leagues = [
         id: 5,
         alias: "Ligue_1",
         name: "Ligue 1",
+        logo: logos("./ligue1.png"),
         clubs: [
             {
                 id: 1,

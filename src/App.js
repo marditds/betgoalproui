@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { NavMenu } from './components/NavMenu'
 import { HashConnect } from 'hashconnect'
 import { Home } from './components/Home'
@@ -65,23 +65,21 @@ function App() {
   return (
     <div className="App">
       <NavMenu pairingData={pairingData} connectWallet={connectWallet} disconnectPairing={disconnectPairing} />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/leagues'>
-            <Route exact path=':leagueAlias' element={<League />} >
-              <Route exact path=':clubAlias' />
-            </Route>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/leagues'>
+          <Route exact path=':leagueAlias' element={<League />} >
+            <Route exact path=':clubAlias' />
           </Route>
+        </Route>
 
-          {/* REDIRECT */}
-          {/* {pairingData &&  */}
-          <Route path='me' element={<Profile pairingData={pairingData} />} />
-          {/* } */}
+        {/* REDIRECT */}
+        {/* {pairingData &&  */}
+        <Route path='me' element={<Profile pairingData={pairingData} />} />
+        {/* } */}
 
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+        <Route path='*' element={<NotFound />} />
+      </Routes>
 
 
     </div>

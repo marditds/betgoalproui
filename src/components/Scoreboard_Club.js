@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 
-export const Scoreboard_Club = ({ leagueName }) => {
+export const Scoreboard_Club = ({ leagueName, leagueLogo }) => {
 
     return (
         <>
@@ -11,6 +11,8 @@ export const Scoreboard_Club = ({ leagueName }) => {
                         {leagueName} Results
                     </h1>
                 </Col>
+                {/* <Col><Image src={leagueLogo} /></Col> */}
+                <Col></Col>
             </Row>
 
             <Row>
