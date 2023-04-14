@@ -7,13 +7,15 @@ export const Home = () => {
     return (
         <Container>
             <Row className='d-flex flex-column'>
+                <Col >
+                    <ResultsBoard />
+                </Col>
+
                 <Col>
                     <Leagues />
                 </Col>
 
-                <Col>
-                    <ResultsBoard />
-                </Col>
+
             </Row>
         </Container>
     )
