@@ -1,37 +1,16 @@
-import React, { useState } from 'react'
-import { Container, Navbar, Form, Nav } from 'react-bootstrap'
-import { HashConnect } from 'hashconnect'
+import React from 'react'
+import { Container, Navbar, NavDropdown, Form, Nav } from 'react-bootstrap'
 
 
-export const NavMenu = () => {
-    const [accountId, setAccountId] = useState("");
-
-    let hashconnect = new HashConnect(true);
-
-    let appMetadata = {
-        name: "totoFootball",
-        description: "prediction app",
-    }
-
-    let initData = hashconnect.init(appMetadata, "testnet", false);
+export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
 
 
-    hashconnect.pairingEvent.once((pairingData) => {
-        console.log('wallet paired')
-        console.log(pairingData)
-
-        setAccountId(pairingData.accountIds)
-        console.log('THIS IS ACCOUNT ID: ', pairingData.accountIds);
-    })
-
-
-    // console.log(hashconnect.status);
 
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/">ToTo ETH</Navbar.Brand>
+                    <Navbar.Brand href="/">TOTO HBAR</Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -44,12 +23,24 @@ export const NavMenu = () => {
                             /></Form>
                         <Nav className='ms-lg-auto text-end'>
                             <Nav.Link href="#about">About</Nav.Link>
-                            {!accountId ?
-                                <Nav.Link onClick={async () => hashconnect.connectToLocalWallet(initData.pairingString)
-                                }>Connect Wallet</Nav.Link>
-                                :
-                                <Nav.Link onClick={async () => hashconnect.disconnect(initData.pairingString)}>Disconnect Wallet - {accountId}</Nav.Link>
+                            {!pairingData ?
+                                <Nav.Link
+                                    onClick={connectWallet}
+                                >
+                                    Connect Wallet
+                                </Nav.Link>
+                                : <>
+                                    <NavDropdown title={pairingData.accountIds} >
+                                        <NavDropdown.Item href="/me" className=' text-lg-start text-end'>
+                                            Profile
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item onClick={() => disconnectPairing(pairingData)} className=' text-lg-start text-end '>
+                                            Disconnect
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
+                                </>
                             }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
