@@ -13,9 +13,14 @@
     transform: scale(1.25);
 }
 
+.current--match--row {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
 .current--match--col {
     color: red !important;
-    /* margin-bottom: 50px; */
+    border-radius: 10px;
     padding: 110px;
     margin: 20px;
     background-repeat: no-repeat !important;
@@ -26,23 +31,40 @@
 }
 
 .current--match--col:hover {
-    /* color: red !important; */
-    /* background-repeat: no-repeat !important; */
-    /* background-size: calc(80%) !important; */
     cursor: pointer;
     background-position: center bottom !important;
 }
 
 
-
+@media (max-width: 1199px) and (min-width: 992px) {
+    .current--match--col {
+        padding: 80px;
+    }
+}
 
 @media (max-width: 991px) {
+    .current--match--col {
+        padding: 60px;
+    }
+
     .club--logo {
         aspect-ratio: 3/1;
     }
 }
 
+
+@media (max-width: 767px) {
+    .current--match--col {
+        padding: 30px;
+    }
+}
+
 @media (max-width: 575px) {
+
+    .current--match--col {
+        padding: 60px;
+    }
+
     .club--logo--accordion {
         aspect-ratio: 1.5/1;
         object-fit: contain;

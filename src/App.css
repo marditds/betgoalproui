@@ -1,5 +1,4 @@
-.App {
-  background-color: black;
-  height: 100vh;
-  color: white;
+body {
+  background-color: #000000 !important;
+  color: red;
 }

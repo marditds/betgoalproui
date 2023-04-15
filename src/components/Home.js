@@ -8,17 +8,18 @@ import "./Home.css"
 export const Home = () => {
     return (
         <Container>
-            <Row className='d-flex flex-column'>
-                {/* <Col > */}
-                <CurrentMatches />
-                {/* </Col> */}
+            {/* <Row className='d-flex flex-column'> */}
+            {/* <Row > */}
+            {/* <Col > */}
+            <CurrentMatches />
+            {/* </Col> */}
 
-                {/* <Col> */}
-                <Leagues />
-                {/* </Col> */}
+            {/* <Col> */}
+            <Leagues />
+            {/* </Col> */}
 
 
-            </Row>
+            {/* </Row> */}
         </Container>
     )
 }

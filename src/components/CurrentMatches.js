@@ -6,7 +6,7 @@ export const CurrentMatches = () => {
     return (
         <div>
             <h1>Current Matches</h1>
-            <Row className='justify-content-center'>
+            <Row className='justify-content-center current--match--row' >
 
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[2].logo})` }}
@@ -23,7 +23,7 @@ export const CurrentMatches = () => {
             </Row>
             {/* </div> */}
             {/* // <div className='d-flex justify-content-evenly'> */}
-            <Row className='justify-content-center'>
+            <Row className='justify-content-center current--match--row' >
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[3].logo})` }}
                 >
