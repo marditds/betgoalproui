@@ -5,7 +5,7 @@ import { leagues } from '../data/leagues'
 export const CurrentMatches = () => {
     return (
         <Container>
-            <h1>Current Matches</h1>
+            <h1 className='mb-0'>Current Matches</h1>
             <Row className='justify-content-center current--match--row' >
 
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
