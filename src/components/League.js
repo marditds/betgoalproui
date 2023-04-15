@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Accordion, Image } from 'react-bootstrap'
+import { Container, Accordion } from 'react-bootstrap'
 import { Scoreboard_Club } from './Scoreboard_Club'
-import { Club } from './Club'
+// import { Club } from './Club'
 import { useParams, Link } from 'react-router-dom'
 import { leagues } from '../data/leagues'
 

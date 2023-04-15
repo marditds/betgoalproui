@@ -64,7 +64,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavMenu pairingData={pairingData} connectWallet={connectWallet} disconnectPairing={disconnectPairing} />
+      <NavMenu pairingData={pairingData} connectWallet={connectWallet}
+      // disconnectPairing={disconnectPairing} 
+      />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/leagues'>
@@ -75,7 +77,7 @@ function App() {
 
         {/* REDIRECT */}
         {/* {pairingData &&  */}
-        <Route path='me' element={<Profile pairingData={pairingData} />} />
+        <Route path='me' element={<Profile pairingData={pairingData} disconnectPairing={disconnectPairing} />} />
         {/* } */}
 
         <Route path='*' element={<NotFound />} />

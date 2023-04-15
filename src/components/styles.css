@@ -1,9 +1,0 @@
-.club--logo {
-    aspect-ratio: 2/1;
-    object-fit: contain;
-    transition: 0.3s;
-}
-
-.club--logo:hover {
-    transform: scale(1.25);
-}

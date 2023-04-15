@@ -1,0 +1,50 @@
+.club--logo {
+    aspect-ratio: 2/1;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.club--logo--accordion {
+    aspect-ratio: 1.85/1;
+    object-fit: contain;
+}
+
+.club--logo:hover {
+    transform: scale(1.25);
+}
+
+.current--match--col {
+    color: red !important;
+    /* margin-bottom: 50px; */
+    padding: 110px;
+    margin: 20px;
+    background-repeat: no-repeat !important;
+    background-size: calc(50%) !important;
+    background-position: center top !important;
+    background-color: yellow !important;
+    transition: 0.3s;
+}
+
+.current--match--col:hover {
+    /* color: red !important; */
+    /* background-repeat: no-repeat !important; */
+    /* background-size: calc(80%) !important; */
+    cursor: pointer;
+    background-position: center bottom !important;
+}
+
+
+
+
+@media (max-width: 991px) {
+    .club--logo {
+        aspect-ratio: 3/1;
+    }
+}
+
+@media (max-width: 575px) {
+    .club--logo--accordion {
+        aspect-ratio: 1.5/1;
+        object-fit: contain;
+    }
+}

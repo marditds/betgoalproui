@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Container, Row, Col, Image } from 'react-bootstrap'
+import { Container, Row, Col, Image, Button } from 'react-bootstrap'
 import profPic from '../assets/100x100.png'
 
-export const Profile = ({ pairingData }) => {
+export const Profile = ({ pairingData, disconnectPairing }) => {
 
     console.log('THIS IS PAIRING DATA IN ME2', pairingData);
 
@@ -29,6 +29,7 @@ export const Profile = ({ pairingData }) => {
                     <Col>{username}</Col>
                     <Col>Account Balance: $ {balance}</Col>
                     <Col>{trackRecord}</Col>
+                    <Col><Button onClick={() => disconnectPairing(pairingData)}>Disconnect</Button></Col>
                 </Col>
             </Row>
             <Row>

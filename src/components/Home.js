@@ -1,19 +1,21 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Leagues } from './Leagues'
-import { ResultsBoard } from './ResultsBoard'
+// import { ResultsBoard } from './ResultsBoard'
+import { CurrentMatches } from './CurrentMatches'
+import "./Home.css"
 
 export const Home = () => {
     return (
         <Container>
             <Row className='d-flex flex-column'>
-                <Col >
-                    <ResultsBoard />
-                </Col>
+                {/* <Col > */}
+                <CurrentMatches />
+                {/* </Col> */}
 
-                <Col>
-                    <Leagues />
-                </Col>
+                {/* <Col> */}
+                <Leagues />
+                {/* </Col> */}
 
 
             </Row>
