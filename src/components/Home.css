@@ -20,24 +20,49 @@
 }
 
 .current--match--col {
-    color: red !important;
     border-radius: 10px;
-    border: 2px solid #00000000;
+    border: 0.5px solid #000000;
     padding: 110px;
-    margin: 20px;
+    margin: 20px 20px 20px 20px !important;
     background-repeat: no-repeat !important;
     background-size: calc(50%) !important;
     background-position: center top !important;
-    background-color: #282A3A !important;
-    background-blend-mode: multiply;
+    background-color: #282a3a !important;
     transition: 0.3s;
+    position: relative;
+
+}
+
+.current--match--col::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.current--match--col:hover::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+.current--match--col>h5 {
+    filter: opacity(1) !important;
 }
 
 .current--match--col:hover {
     cursor: pointer;
-    border: 2px solid #C69749;
+    border: 0.5px solid #C69749;
     background-position: center bottom !important;
-    background-blend-mode: initial;
+    background-color: rgba(0, 0, 0, 1);
 
 }
 

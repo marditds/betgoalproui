@@ -11,7 +11,7 @@ export const CurrentMatches = () => {
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[2].logo})` }}
                 >
-                    <h5>Team 1</h5>
+                    <h5>Arsenal VS. Man. Utd.</h5>
                     <h5>Team 2</h5>
                 </Col>
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
