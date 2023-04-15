@@ -82,6 +82,33 @@
 .leagues--accordion--header>button {
     background-color: #282a3a;
     color: white;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-radius: 0px !important;
+    padding: 8px !important;
+}
+
+.leagues--accordion--header>button:hover {
+    color: #735F32;
+}
+
+.leagues--accordion--header>button:focus {
+    border: 0px 2px 0px 12px !important;
+    border-color: #C69749 !important;
+    box-shadow: 0 0 0 1px #C69749 !important;
+}
+
+.leagues--accordion--header>button:active {
+    color: #C69749;
+}
+
+.leagues--accordion--body {
+    border-top: 0px !important;
+    border-right: 2px solid #000000;
+    /* border-bottom: 2px solid #000000; */
+    border-left: 2px solid #000000;
 }
 
 .accordion-button::after {
@@ -91,6 +118,7 @@
 .accordion-button:not(.collapsed) {
     background-color: #282a3a !important;
     color: white !important;
+    box-shadow: none !important;
 }
 
 .leagues--row {

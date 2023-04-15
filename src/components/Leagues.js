@@ -30,7 +30,7 @@ export const Leagues = () => {
                                 Leagues
                                 <BsFillCaretDownFill className='ms-auto' />
                             </Accordion.Header>
-                            <Accordion.Body>
+                            <Accordion.Body className='leagues--accordion--body'>
                                 <Row className='d-flex' >
                                     {leagues.map((league) => {
                                         return (
