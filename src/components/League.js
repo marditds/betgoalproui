@@ -20,24 +20,6 @@ export const League = () => {
             <Container>
                 <Scoreboard_Club leagueName={league.name} leagueLogo={league.logo} />
 
-                {/* TEAM'S LIST HERE */}
-                <Accordion>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header>{league.name} Clubs</Accordion.Header>
-                        <Accordion.Body>
-                            {league.clubs.map((club) => {
-                                return (
-                                    <div key={club.id}>
-                                        {/* <Link to={club.alias} > */}
-                                        {club.name}
-                                        {/* </Link> */}
-                                    </div>
-                                )
-                            })}
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
-
 
             </Container>
         </Container>

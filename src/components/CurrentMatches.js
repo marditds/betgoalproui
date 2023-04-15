@@ -11,14 +11,16 @@ export const CurrentMatches = () => {
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[2].logo})` }}
                 >
-                    <h5>Arsenal VS. Man. Utd.</h5>
-                    <h5>Team 2</h5>
+                    <h5>Arsenal</h5>
+                    <h2>VS</h2>
+                    <h5>Man. Utd.</h5>
                 </Col>
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[2].logo})` }}
                 >
-                    <h5>Team 1</h5>
-                    <h5>Team 2</h5>
+                    <h5>Brentford</h5>
+                    <h2>VS</h2>
+                    <h5>Chelsea</h5>
                 </Col>
             </Row>
             {/* </div> */}
@@ -27,14 +29,16 @@ export const CurrentMatches = () => {
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[3].logo})` }}
                 >
-                    <h5>Team 1</h5>
-                    <h5>Team 2</h5>
+                    <h5>Osasuna</h5>
+                    <h2>VS</h2>
+                    <h5>Valencia</h5>
                 </Col>
                 <Col className='d-flex justify-content-center  current--match--col' sm={5}
                     style={{ background: `url(${leagues[2].logo})` }}
                 >
-                    <h5>Team 1</h5>
-                    <h5>Team 2</h5>
+                    <h5>Everton FC</h5>
+                    <h2>VS</h2>
+                    <h5>Fulham</h5>
                 </Col>
             </Row>
         </Container>
