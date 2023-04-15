@@ -56,6 +56,7 @@
 
 .current--match--col>h5 {
     filter: opacity(1) !important;
+    transition: 0.3s;
 }
 
 .current--match--col:hover {
@@ -63,9 +64,11 @@
     border: 0.5px solid #C69749;
     background-position: center bottom !important;
     background-color: rgba(0, 0, 0, 1);
-
 }
 
+.current--match--col:hover>h5 {
+    color: #C69749;
+}
 
 @media (max-width: 1199px) and (min-width: 992px) {
     .current--match--col {
