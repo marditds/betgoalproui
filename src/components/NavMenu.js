@@ -9,7 +9,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"
-                sticky='top'
+                fixed='bottom'
             >
                 <Container>
                     <Navbar.Brand href="/" >TOTO HBAR</Navbar.Brand>
