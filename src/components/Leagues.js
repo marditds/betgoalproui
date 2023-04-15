@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Image, Accordion } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { leagues } from '../data/leagues'
+import { BsFillCaretDownFill } from 'react-icons/bs'
 
 export const Leagues = () => {
     return (
@@ -23,8 +24,12 @@ export const Leagues = () => {
 
                 <Row className='d-block d-md-none'>
                     <Accordion>
-                        <Accordion.Item>
-                            <Accordion.Header>Leagues</Accordion.Header>
+                        <Accordion.Item className='leagues--accordion--item'>
+                            <Accordion.Header className='leagues--accordion--header'>
+
+                                Leagues
+                                <BsFillCaretDownFill className='ms-auto' />
+                            </Accordion.Header>
                             <Accordion.Body>
                                 <Row className='d-flex' >
                                     {leagues.map((league) => {

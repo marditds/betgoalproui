@@ -74,6 +74,29 @@
     background-color: #282a3a;
 }
 
+.leagues--accordion--item {
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.leagues--accordion--header>button {
+    background-color: #282a3a;
+    color: white;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #282a3a !important;
+    color: white !important;
+}
+
+.leagues--row {
+    padding: 20px 0 20px 0;
+}
+
 @media (max-width: 1199px) and (min-width: 992px) {
     .current--match--col {
         padding: 80px;
