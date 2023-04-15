@@ -1,10 +1,10 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { leagues } from '../data/leagues'
 
 export const CurrentMatches = () => {
     return (
-        <div>
+        <Container>
             <h1>Current Matches</h1>
             <Row className='justify-content-center current--match--row' >
 
@@ -37,7 +37,7 @@ export const CurrentMatches = () => {
                     <h5>Team 2</h5>
                 </Col>
             </Row>
-        </div>
+        </Container>
 
     )
 }

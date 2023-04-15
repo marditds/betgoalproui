@@ -70,6 +70,10 @@
     color: #C69749;
 }
 
+.leagues--fluid--container {
+    background-color: #282a3a;
+}
+
 @media (max-width: 1199px) and (min-width: 992px) {
     .current--match--col {
         padding: 80px;
@@ -97,6 +101,10 @@
 
     .current--match--col {
         padding: 60px;
+    }
+
+    .leagues--fluid--container {
+        padding: 0 !important;
     }
 
     .club--logo--accordion {
