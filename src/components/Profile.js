@@ -22,7 +22,7 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
     return (
         <Container style={{ color: "white" }}>
 
-            <h3 xs={12}>Profile</h3>
+            <h3>Profile</h3>
             <Row>
                 <Col className='text-end'><Image src={profPic} roundedCircle /></Col>
                 <Col className='d-flex flex-column'>

@@ -162,6 +162,13 @@
     }
 }
 
+@media (max-width: 767px) and (min-width: 576px) {
+    .current--match--col>h5 {
+        font-size: 12pt;
+    }
+
+}
+
 @media (max-width: 575px) {
 
     .current--match--col {
