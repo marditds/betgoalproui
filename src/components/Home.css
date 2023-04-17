@@ -30,7 +30,6 @@
      background-color: #282a3a !important;
      transition: 0.3s;
      position: relative;
-
  }
 
  .current--match--col::before {
@@ -69,7 +68,6 @@
      cursor: pointer;
      border: 0.5px solid #C69749;
      background-position: center bottom !important;
-     background-color: rgba(0, 0, 0, 1);
  }
 
  .current--match--col:hover>h5 {

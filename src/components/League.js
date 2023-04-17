@@ -15,12 +15,14 @@ export const League = () => {
     console.log(league.clubs);
 
     return (
-        <Container fluid className='club--body'>
+        <Container fluid className='league--body'
+            style={{ background: `url(${league.logo})` }}
+        >
             <Container>
 
                 <Link to={`./picks`}>
-                    <Row>
-                        <Col className='league--col'>
+                    <Row className='league--row'>
+                        <Col className='d-flex justify-content-center align-items-center'>
                             YOUR PICKS for {league.alias}
                         </Col>
                     </Row>
@@ -28,8 +30,8 @@ export const League = () => {
 
 
                 <Link to={`./scoreboard`}>
-                    <Row>
-                        <Col className='league--col'>
+                    <Row className='league--row'>
+                        <Col className='d-flex justify-content-center align-items-center'>
                             SCOREBOARD for {league.alias}
                         </Col>
                     </Row>

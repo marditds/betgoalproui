@@ -2,8 +2,36 @@ body {
     margin-top: 40px !important;
 }
 
-.league--col {
-    background-color: yellow;
+.league--body {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    position: relative;
+}
+
+.league--body::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.league--row {
+    background-color: transparent;
     height: 40vh;
     margin: 40px;
+    border: 0.5px solid #282A3A;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.league--row:hover {
+    border: 0.5px solid #C69749;
+}
+
+.league--row {
+    backdrop-filter: blur(10px);
 }
