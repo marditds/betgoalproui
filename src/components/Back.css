@@ -1,0 +1,19 @@
+.back--btn {
+    background-color: transparent !important;
+    border: transparent !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    font-weight: bolder !important;
+    font-size: larger !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.back--btn:hover {
+    color: #735F32 !important;
+}
+
+.back--btn>svg {
+    font-size: larger;
+}

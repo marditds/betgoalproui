@@ -20,11 +20,8 @@ export const League = () => {
         <Container fluid className='league--body'
             style={{ background: `url(${league.logo})` }}
         >
+            <Back />
             <Container>
-
-                <span className='back--btn'>
-                    <Back />
-                </span>
                 <Link to={`./picks`} className='league--a'>
                     <Row className='league--row'>
                         <Col className='d-flex justify-content-center align-items-center league--col'>
