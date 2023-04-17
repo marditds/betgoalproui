@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Accordion } from 'react-bootstrap'
-import { Scoreboard_Club } from './Scoreboard_Club'
+import { Container, Button } from 'react-bootstrap'
+import { Scoreboard_League } from './Scoreboard_League'
+import { Predict_Entry } from './Predict_Entry'
 // import { Club } from './Club'
 import { useParams, Link } from 'react-router-dom'
 import { leagues } from '../data/leagues'
@@ -18,7 +19,13 @@ export const League = () => {
     return (
         <Container fluid className='club--body'>
             <Container>
-                <Scoreboard_Club leagueName={league.name} leagueLogo={league.logo} />
+
+                <Link to={`./picks`}>
+                    <p>GO TO PICKS for {league.alias}</p>
+                </Link>
+                {/* to='/scoreboard' */}
+                // <Scoreboard_League leagueName={league.name} leagueLogo={league.logo} />
+
 
 
             </Container>
