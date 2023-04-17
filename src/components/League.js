@@ -22,8 +22,8 @@ export const League = () => {
 
                 <Link to={`./picks`}>
                     <Row className='league--row'>
-                        <Col className='d-flex justify-content-center align-items-center'>
-                            YOUR PICKS for {league.alias}
+                        <Col className='d-flex justify-content-center align-items-center league--col'>
+                            <h3>YOUR PICKS</h3>
                         </Col>
                     </Row>
                 </Link>
@@ -31,8 +31,8 @@ export const League = () => {
 
                 <Link to={`./scoreboard`}>
                     <Row className='league--row'>
-                        <Col className='d-flex justify-content-center align-items-center'>
-                            SCOREBOARD for {league.alias}
+                        <Col className='d-flex justify-content-center align-items-center league--col'>
+                            <h3>SCOREBOARD</h3>
                         </Col>
                     </Row>
                 </Link>
