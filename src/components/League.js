@@ -1,10 +1,8 @@
 import React from 'react'
-import { Container, Button } from 'react-bootstrap'
-import { Scoreboard_League } from './Scoreboard_League'
-import { Predict_Entry } from './Predict_Entry'
-// import { Club } from './Club'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useParams, Link } from 'react-router-dom'
 import { leagues } from '../data/leagues'
+import './League.css'
 
 export const League = () => {
 
@@ -21,10 +19,21 @@ export const League = () => {
             <Container>
 
                 <Link to={`./picks`}>
-                    <p>GO TO PICKS for {league.alias}</p>
+                    <Row>
+                        <Col className='league--col'>
+                            YOUR PICKS for {league.alias}
+                        </Col>
+                    </Row>
                 </Link>
-                {/* to='/scoreboard' */}
-                // <Scoreboard_League leagueName={league.name} leagueLogo={league.logo} />
+
+
+                <Link to={`./scoreboard`}>
+                    <Row>
+                        <Col className='league--col'>
+                            SCOREBOARD for {league.alias}
+                        </Col>
+                    </Row>
+                </Link>
 
 
 

@@ -71,6 +71,7 @@ function App() {
       />
       <Routes>
         <Route path='/' element={<Home />} />
+
         <Route path='/leagues'>
           <Route exact path=':leagueAlias' element={<League />} />
         </Route>

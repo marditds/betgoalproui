@@ -4,7 +4,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap'
 export const Scoreboard_League = ({ leagueName, leagueLogo }) => {
 
     return (
-        <>
+        <Container>
             <Row>
                 <Col>
                     <h2 style={{ color: "white" }}>
@@ -39,6 +39,6 @@ export const Scoreboard_League = ({ leagueName, leagueLogo }) => {
                 <Col>a</Col>
                 <Col>c</Col>
             </Row>
-        </>
+        </Container>
     )
 }
