@@ -20,7 +20,7 @@ export const League = () => {
         >
             <Container>
 
-                <Link to={`./picks`}>
+                <Link to={`./picks`} className='league--a'>
                     <Row className='league--row'>
                         <Col className='d-flex justify-content-center align-items-center league--col'>
                             <h3>YOUR PICKS</h3>
@@ -29,7 +29,7 @@ export const League = () => {
                 </Link>
 
 
-                <Link to={`./scoreboard`}>
+                <Link to={`./scoreboard`} className='league--a'>
                     <Row className='league--row'>
                         <Col className='d-flex justify-content-center align-items-center league--col'>
                             <h3>SCOREBOARD</h3>

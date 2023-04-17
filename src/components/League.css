@@ -37,13 +37,13 @@ body {
     border: 0.5px solid #C69749;
 }
 
-a {
+.league--a {
     color: inherit !important;
     text-decoration: none !important;
 
 }
 
-a:hover {
+.league--a:hover {
     color: #C69749 !important;
 }
 
