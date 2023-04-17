@@ -1,6 +1,5 @@
 import React from 'react'
 import { Leagues } from './Leagues'
-// import { ResultsBoard } from './ResultsBoard'
 import { CurrentMatches } from './CurrentMatches'
 import "./Home.css"
 

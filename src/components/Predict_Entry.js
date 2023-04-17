@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, Link, Outlet } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import { leagues } from '../data/leagues'
+import { Back } from './Back'
 
 
 
@@ -14,6 +15,7 @@ export const Predict_Entry = ({ leagueName, clubName }) => {
 
     console.log('PREDITCT');
     return (<Container>
+        <Back />
         <h2>Make Your Picks for {league.name}</h2>
         <Row>
             <Col>{clubName}Team A</Col>

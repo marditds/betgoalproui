@@ -20,6 +20,7 @@ export const League = () => {
         >
             <Container>
 
+
                 <Link to={`./picks`} className='league--a'>
                     <Row className='league--row'>
                         <Col className='d-flex justify-content-center align-items-center league--col'>

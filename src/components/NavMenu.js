@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Navbar, NavDropdown, Form, Nav } from 'react-bootstrap'
+import './NavMenu.css'
 
 
 export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
@@ -9,7 +10,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
     return (
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"
-                fixed='bottom'
+                fixed='bottom' className='navbar--body'
             >
                 <Container>
                     <Navbar.Brand href="/" >TOTO HBAR</Navbar.Brand>
@@ -17,11 +18,11 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                         {!pairingData ?
                             <Nav.Link
                                 onClick={connectWallet}
-                            >
+                                className='navbar--navlink' >
                                 Connect Wallet
                             </Nav.Link>
                             : <>
-                                <Nav.Link href='/me' className=' text-lg-start text-end' >
+                                <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                                     Profile
                                 </Nav.Link>
                                 {/* <NavDropdown title={pairingData.accountIds}  >
