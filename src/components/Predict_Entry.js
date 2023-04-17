@@ -14,26 +14,28 @@ export const Predict_Entry = ({ leagueName, clubName }) => {
 
 
     console.log('PREDITCT');
-    return (<Container>
-        <Back />
-        <h2>Make Your Picks for {league.name}</h2>
-        <Row>
-            <Col>{clubName}Team A</Col>
-            <Col>{clubName}Team B</Col>
-        </Row>
-        <Row>
-            <Col>{clubName}Team A</Col>
-            <Col>{clubName}Team B</Col>
-        </Row>
-        <Row>
-            <Col>{clubName}Team A</Col>
-            <Col>{clubName}Team B</Col>
-        </Row>
-        <Row>
-            <Col>{clubName}Team A</Col>
-            <Col>{clubName}Team B</Col>
-        </Row>
-
-    </Container>
+    return (
+        <Container fluid>
+            <Container>
+                <Back />
+                <h2>Make Your Picks for {league.name}</h2>
+                <Row>
+                    <Col>{clubName}Team A</Col>
+                    <Col>{clubName}Team B</Col>
+                </Row>
+                <Row>
+                    <Col>{clubName}Team A</Col>
+                    <Col>{clubName}Team B</Col>
+                </Row>
+                <Row>
+                    <Col>{clubName}Team A</Col>
+                    <Col>{clubName}Team B</Col>
+                </Row>
+                <Row>
+                    <Col>{clubName}Team A</Col>
+                    <Col>{clubName}Team B</Col>
+                </Row>
+            </Container>
+        </Container>
     )
 }
