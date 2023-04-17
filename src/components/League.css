@@ -13,7 +13,7 @@ body {
 
 .league--body::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     right: 0;
@@ -21,8 +21,12 @@ body {
     left: 0;
 }
 
+.back--btn {
+    position: relative;
+    z-index: 1;
+}
+
 .league--row {
-    /* color: white; */
     text-decoration: none !important;
     background-color: transparent;
     height: 40vh;
