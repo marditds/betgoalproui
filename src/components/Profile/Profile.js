@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
 import { Back } from '../Back-Btn/Back'
+import './Profile.css'
 import profPic from '../../assets/100x100.png'
 
 export const Profile = ({ pairingData, disconnectPairing }) => {
@@ -56,38 +57,43 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                     </Col>
                 </Row>
                 <Row className='flex-column'>
-                    <h4>Profile Settings</h4>
+                    <h4>Settings</h4>
                     <Col>
                         <Form >
                             {/* name lastname username email DOB */}
                             <Row>
-                                <Form.Group as={Col} md={4} controlId="usernameField">
+                                <Form.Group as={Col} md={4} controlId="usernameField" className='profile--form--group'>
                                     <Form.Label>Username:</Form.Label>
                                     <Form.Control
                                         type='username'
                                         value={username}
-                                        onChange={onUsernameChange} />
+                                        onChange={onUsernameChange}
+                                        className='profile--form--control' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={4} controlId="firstnameField">
+                                <Form.Group as={Col} md={4} controlId="firstnameField" className='profile--form--group'>
                                     <Form.Label>First Name:</Form.Label>
-                                    <Form.Control type='name' />
+                                    <Form.Control type='name'
+                                        className='profile--form--control' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={4} controlId="lastnameField">
+                                <Form.Group as={Col} md={4} controlId="lastnameField" className='profile--form--group'>
                                     <Form.Label>Last Name:</Form.Label>
-                                    <Form.Control type='name' />
+                                    <Form.Control type='name'
+                                        className='profile--form--control' />
                                 </Form.Group>
                             </Row>
                             <Row>
-                                <Form.Group as={Col} md={6} controlId="emailField">
+                                <Form.Group as={Col} md={6} controlId="emailField" className='profile--form--group'>
                                     <Form.Label>Email:</Form.Label>
-                                    <Form.Control type='email' />
+                                    <Form.Control type='email'
+                                        className='profile--form--control' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={6} controlId="dateField">
+                                <Form.Group as={Col} md={6} controlId="dateField" className='profile--form--group'>
                                     <Form.Label>Date of Birth:</Form.Label>
-                                    <Form.Control type='date' />
+                                    <Form.Control type='date'
+                                        className='profile--form--control' />
                                 </Form.Group>
 
                                 <Col className='d-flex justify-content-end align-items-end'>

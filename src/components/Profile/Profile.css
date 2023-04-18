@@ -1,0 +1,16 @@
+body {
+    /* background-color: azure !important; */
+}
+
+.profile--form--group {
+    margin: 0 0 15px 0;
+}
+
+.profile--form--control {
+    transition: 0.3s !important;
+}
+
+.profile--form--control:focus {
+    background-color: blue !important;
+    box-shadow: 0 0 !important;
+}
