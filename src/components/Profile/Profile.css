@@ -7,10 +7,12 @@ body {
 }
 
 .profile--form--control {
+    background-color: white !important;
+    border-radius: 10px !important;
     transition: 0.3s !important;
 }
 
 .profile--form--control:focus {
-    background-color: blue !important;
+    border-color: #735F32 !important;
     box-shadow: 0 0 !important;
 }
