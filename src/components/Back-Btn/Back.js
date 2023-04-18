@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Row, Col, BUtton, Button } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import { IoIosArrowBack } from 'react-icons/io'
 import './Back.css'
 

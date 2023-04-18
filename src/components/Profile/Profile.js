@@ -10,8 +10,29 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
 
     const navigate = useNavigate();
     const [username, setUsername] = useState("username");
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [userData, setUserData] = useState({
+        username: username,
+        firstname: firstname,
+        lastname: lastname,
+        email: email
+    })
+
     const [trackRecord, setTrackRecord] = useState("trackrecord");
     const [balance, setBalance] = useState(0);
+
+    console.log(userData.username);
+
+    const onUsernameChange = (event) => {
+        setUsername(event.target.value);
+    }
+
+    const handleSaveChanges = (event) => {
+        event.preventDefault();
+        setUserData({ ...userData, username });
+    }
 
     useEffect(() => {
         if (!pairingData || !pairingData.accountIds) {
@@ -28,7 +49,7 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                 <Row>
                     <Col className='text-md-end text-center' md={6} sm={12}><Image src={profPic} roundedCircle /></Col>
                     <Col className='d-flex flex-column text-md-start text-center'>
-                        <Col>{username}</Col>
+                        <Col><span>{userData.username}</span></Col>
                         <Col>Account Balance: $ {balance}</Col>
                         <Col>{trackRecord}</Col>
 
@@ -37,31 +58,34 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                 <Row className='flex-column'>
                     <h4>Profile Settings</h4>
                     <Col>
-                        <Form>
+                        <Form >
                             {/* name lastname username email DOB */}
                             <Row>
-                                <Form.Group as={Col} md={4} controlId="username">
+                                <Form.Group as={Col} md={4} controlId="usernameField">
                                     <Form.Label>Username:</Form.Label>
-                                    <Form.Control type='username' />
+                                    <Form.Control
+                                        type='username'
+                                        value={username}
+                                        onChange={onUsernameChange} />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={4} controlId="firstname">
+                                <Form.Group as={Col} md={4} controlId="firstnameField">
                                     <Form.Label>First Name:</Form.Label>
                                     <Form.Control type='name' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={4} controlId="lastname">
+                                <Form.Group as={Col} md={4} controlId="lastnameField">
                                     <Form.Label>Last Name:</Form.Label>
                                     <Form.Control type='name' />
                                 </Form.Group>
                             </Row>
                             <Row>
-                                <Form.Group as={Col} md={6} controlId="email">
+                                <Form.Group as={Col} md={6} controlId="emailField">
                                     <Form.Label>Email:</Form.Label>
                                     <Form.Control type='email' />
                                 </Form.Group>
 
-                                <Form.Group as={Col} md={6} controlId="date">
+                                <Form.Group as={Col} md={6} controlId="dateField">
                                     <Form.Label>Date of Birth:</Form.Label>
                                     <Form.Control type='date' />
                                 </Form.Group>
@@ -70,7 +94,7 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
 
                                     <Button onClick={() => disconnectPairing(pairingData)}>Disconnect</Button>
 
-                                    <Button>Save Changes</Button>
+                                    <Button type='submit' onClick={handleSaveChanges}>Save Changes</Button>
 
                                 </Col>
                             </Row>
