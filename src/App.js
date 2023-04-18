@@ -1,14 +1,14 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import { Routes, Route, Outlet } from "react-router-dom"
-import { NavMenu } from './components/NavMenu'
+import { NavMenu } from './components/NavMenu/NavMenu'
 import { HashConnect } from 'hashconnect'
-import { Home } from './components/Home'
-import { League } from './components/League'
-import { Profile } from './components/Profile'
-import { NotFound } from './components/NotFound';
-import { Predict_Entry } from './components/Predict_Entry';
-import { Scoreboard_League } from './components/Scoreboard_League';
+import { Home } from './components/Home/Home'
+import { League } from './components/League/League'
+import { Profile } from './components/Profile/Profile'
+import { NotFound } from './components/404/NotFound';
+import { Predict_Entry } from './components/League/Predict_Entry';
+import { Scoreboard_League } from './components/League/Scoreboard_League';
 
 function App() {
 

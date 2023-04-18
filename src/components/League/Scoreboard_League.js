@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import { Back } from './Back'
+import { Back } from '../Back-Btn/Back'
 
 export const Scoreboard_League = ({ leagueName, leagueLogo }) => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { leagues } from '../data/leagues'
+import { leagues } from '../../data/leagues'
 
 export const CurrentMatches = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image, Accordion } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { leagues } from '../data/leagues'
+import { leagues } from '../../data/leagues'
 import { BsFillCaretDownFill } from 'react-icons/bs'
 
 export const Leagues = () => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useParams, Link, Outlet } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
-import { leagues } from '../data/leagues'
-import { Back } from './Back'
+import { leagues } from '../../data/leagues'
+import { Back } from '../Back-Btn/Back'
 
 
 
