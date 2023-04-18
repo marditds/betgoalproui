@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
 import { Back } from '../Back-Btn/Back'
@@ -14,11 +14,13 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
+    const [avatar, setAvatar] = useState(profPic);
     const [userData, setUserData] = useState({
         username: username,
         firstname: firstname,
         lastname: lastname,
-        email: email
+        email: email,
+        avatar: avatar
     })
 
     const [trackRecord, setTrackRecord] = useState("trackrecord");
@@ -48,12 +50,14 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                 <Back />
                 <h3>Profile</h3>
                 <Row>
-                    <Col className='text-md-end text-center' md={6} sm={12}><Image src={profPic} roundedCircle /></Col>
+                    <Col className='text-md-end text-center' md={6} sm={12}>
+                        <Image src={userData.avatar} roundedCircle />
+                    </Col>
                     <Col className='d-flex flex-column text-md-start text-center'>
-                        <Col><span>{userData.username}</span></Col>
+                        <Col><h4>{userData.username}</h4></Col>
                         <Col>Account Balance: $ {balance}</Col>
+                        <Col>Wallet ID: {pairingData.accountIds}</Col>
                         <Col>{trackRecord}</Col>
-
                     </Col>
                 </Row>
                 <Row className='flex-column'>
@@ -96,9 +100,9 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                                         className='profile--form--control' />
                                 </Form.Group>
 
-                                <Col className='d-flex justify-content-end align-items-end'>
+                                <Col className='d-flex justify-content-sm-end justify-content-evenly align-items-end profile--btns'>
 
-                                    <Button onClick={() => disconnectPairing(pairingData)}>Disconnect</Button>
+                                    <Button onClick={() => disconnectPairing(pairingData)}>Disconnect Wallet</Button>
 
                                     <Button type='submit' onClick={handleSaveChanges}>Save Changes</Button>
 

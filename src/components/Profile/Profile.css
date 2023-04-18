@@ -2,17 +2,52 @@ body {
     /* background-color: azure !important; */
 }
 
+.profile--upload--btn {
+    border-radius: 100% !important;
+}
+
 .profile--form--group {
     margin: 0 0 15px 0;
 }
 
 .profile--form--control {
+    color: #000000 !important;
     background-color: white !important;
     border-radius: 10px !important;
     transition: 0.3s !important;
 }
 
 .profile--form--control:focus {
+    color: white !important;
+    background-color: #735F32 !important;
     border-color: #735F32 !important;
     box-shadow: 0 0 !important;
+}
+
+.profile--btns>button {
+    background-color: black !important;
+    border-color: #735F32 !important;
+}
+
+.profile--btns>button+button {
+    margin-left: 10px;
+}
+
+.profile--btns>button:hover {
+    background-color: #282A3A !important;
+}
+
+@media (max-width: 575px) {
+    .profile--btns>button+button {
+        /* margin-left: 0px; */
+    }
+}
+
+@media (max-width: 375px) {
+
+    .profile--btns {
+        justify-content: space-between !important;
+    }
+
+
 }
