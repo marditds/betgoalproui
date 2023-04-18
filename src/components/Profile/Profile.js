@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
 import { Back } from '../Back-Btn/Back'
@@ -25,8 +25,6 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
 
     const [trackRecord, setTrackRecord] = useState("trackrecord");
     const [balance, setBalance] = useState(0);
-
-    console.log(userData.username);
 
     const onUsernameChange = (event) => {
         setUsername(preVal => event.target.value);
@@ -69,9 +67,9 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                     </Col>
                     <Col className='d-flex flex-column text-md-start text-center'>
                         <Col><h4>{userData.username}</h4></Col>
-                        <Col>Account Balance: $ {balance}</Col>
+                        <Col>Account Balance: {balance} HBAR</Col>
                         <Col>Wallet ID: {pairingData.accountIds}</Col>
-                        <Col>{trackRecord}</Col>
+                        <Col>{trackRecord}Winnign Streak</Col>
                     </Col>
                 </Row>
                 <Row className='flex-column'>

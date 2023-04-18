@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, Outlet } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { NavMenu } from './components/NavMenu/NavMenu'
 import { HashConnect } from 'hashconnect'
 import { Home } from './components/Home/Home'

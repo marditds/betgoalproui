@@ -5,6 +5,7 @@ body {
 .league--body {
     background-repeat: no-repeat !important;
     background-position: center !important;
+    background-attachment: fixed !important;
     background-size: contain !important;
     position: relative;
 }
