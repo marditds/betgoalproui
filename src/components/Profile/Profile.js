@@ -29,13 +29,27 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
     console.log(userData.username);
 
     const onUsernameChange = (event) => {
-        setUsername(event.target.value);
+        setUsername(preVal => event.target.value);
+    }
+
+    const onFirstnameChange = (event) => {
+        setFirstname(preVal => event.target.value);
+    }
+
+    const onLastnameChange = (event) => {
+        setLastname(preVal => event.target.value);
+    }
+
+    const onEmailChange = (event) => {
+        setEmail(preVal => event.target.value);
     }
 
     const handleSaveChanges = (event) => {
         event.preventDefault();
-        setUserData({ ...userData, username });
+        setUserData({ ...userData, username, firstname, lastname, email });
     }
+
+    console.log(userData.username + ", " + userData.firstname + ", " + userData.lastname + ", " + userData.email)
 
     useEffect(() => {
         if (!pairingData || !pairingData.accountIds) {
@@ -66,6 +80,8 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                         <Form >
                             {/* name lastname username email DOB */}
                             <Row>
+
+                                {/* USERNAME */}
                                 <Form.Group as={Col} md={4} controlId="usernameField" className='profile--form--group'>
                                     <Form.Label>Username:</Form.Label>
                                     <Form.Control
@@ -75,30 +91,43 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                                         className='profile--form--control' />
                                 </Form.Group>
 
+                                {/* FIRST NAME */}
                                 <Form.Group as={Col} md={4} controlId="firstnameField" className='profile--form--group'>
                                     <Form.Label>First Name:</Form.Label>
-                                    <Form.Control type='name'
+                                    <Form.Control
+                                        type='name'
+                                        value={firstname}
+                                        onChange={onFirstnameChange}
                                         className='profile--form--control' />
                                 </Form.Group>
 
+                                {/* LAST NAME */}
                                 <Form.Group as={Col} md={4} controlId="lastnameField" className='profile--form--group'>
                                     <Form.Label>Last Name:</Form.Label>
                                     <Form.Control type='name'
+                                        value={lastname}
+                                        onChange={onLastnameChange}
                                         className='profile--form--control' />
                                 </Form.Group>
                             </Row>
                             <Row>
+
+                                {/* EMAIL */}
                                 <Form.Group as={Col} md={6} controlId="emailField" className='profile--form--group'>
                                     <Form.Label>Email:</Form.Label>
                                     <Form.Control type='email'
+                                        vaue={email}
+                                        onChange={onEmailChange}
                                         className='profile--form--control' />
                                 </Form.Group>
 
+                                {/* DATE OF BIRTH */}
                                 <Form.Group as={Col} md={6} controlId="dateField" className='profile--form--group'>
                                     <Form.Label>Date of Birth:</Form.Label>
                                     <Form.Control type='date'
                                         className='profile--form--control' />
                                 </Form.Group>
+
 
                                 <Col className='d-flex justify-content-sm-end justify-content-evenly align-items-end profile--btns'>
 
