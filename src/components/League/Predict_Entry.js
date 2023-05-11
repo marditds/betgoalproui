@@ -16,8 +16,6 @@ export const Predict_Entry = () => {
 
     const [value, setValue] = useState(0);
 
-    // setValue((preVal) => value++);
-
     console.log('PREDITCT');
     return (
         <Container fluid>
@@ -26,27 +24,56 @@ export const Predict_Entry = () => {
                 <h2>Make Your Picks for {league.name}</h2>
                 <Row>
                     <Col className='d-flex justify-content-between'>
-                        {league.clubs[1].name}
+
+                        {league.clubs[1].name.split(" ").slice(0, 3).slice(0, 2).map((team, i) =>
+                            <React.Fragment key={i}>
+                                {team.slice(0, 3)}
+                                {" "}
+                            </React.Fragment>
+                        )}
                         <Counter value={value} />
+
                     </Col>
 
                     <Col className='d-flex justify-content-between'>
                         <Counter value={value} />
-                        {league.clubs[7].name}
+                        {league.clubs[7].name.split(" ").slice(0, 2).map((team, i) =>
+                            <React.Fragment key={i}>
+                                {team.slice(0, 3)}
+                                {" "}
+                            </React.Fragment>
+                        )}
+
+                    </Col >
+
+                </Row>
+                <Row>
+                    <Col className='d-flex justify-content-between'>
+
+                        {league.clubs[3].name.split(" ").slice(0, 2).map((team, i) =>
+                            <React.Fragment key={i}>
+                                {team.slice(0, 3)}
+                                {" "}
+                            </React.Fragment>
+                        )}
+                        <Counter value={value} />
+
+                    </Col>
+
+                    <Col className='d-flex justify-content-between'>
+
+                        <Counter value={value} />
+                        {league.clubs[6].name.split(" ").slice(0, 2).map((team, i) =>
+                            <React.Fragment key={i}>
+                                {team.slice(0, 3)}
+                                {" "}
+                            </React.Fragment>
+                        )}
+
                     </Col>
 
                 </Row>
-                {/* <Row className='match'>
-                    <Form.Group as={Col} controlId="formGridEmail" className='d-flex justify-content-between'>
-                        <Form.Label>{league.clubs[1].name}</Form.Label>
-                        <Form.Control type="number" value={value} />
-                    </Form.Group>
 
-                    <Form.Group as={Col} controlId="formGridPassword" className='d-flex justify-content-between'>
-                        <Form.Control type="number" />
-                        <Form.Label>{league.clubs[7].name}</Form.Label>
-                    </Form.Group>
-                </Row> */}
                 <Row>
                     <Col>Team A</Col>
                     <Col>Team B</Col>
