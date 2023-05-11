@@ -1,0 +1,13 @@
+.other--leagues--link {
+    color: white;
+    text-decoration: none;
+}
+
+.other--leagues--link:hover {
+    color: #C69749;
+}
+
+
+.other--leagues--link:active {
+    color: #735F32;
+}

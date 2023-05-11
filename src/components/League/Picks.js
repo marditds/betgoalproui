@@ -1,9 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { leagues } from '../../data/leagues';
 import { Back } from '../Back-Btn/Back';
 import { Predict_Entry } from './Predict_Entry';
+import { Other_Leagues } from './Other_Leagues';
+import './Picks.css';
 
 
 export const Picks = () => {
@@ -17,11 +19,12 @@ export const Picks = () => {
             <Container>
                 <Back />
 
-                <h2>Make Your Picks for {league.name}</h2>
+
                 <Row>
+
                     <Predict_Entry league={league} />
 
-                    <Col lg={5}>BBBBBBBBB</Col>
+                    <Other_Leagues leagues={leagues} />
 
                 </Row>
             </Container>
