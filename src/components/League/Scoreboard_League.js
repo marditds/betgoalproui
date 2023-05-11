@@ -1,8 +1,15 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import { Back } from '../Back-Btn/Back'
+import { leagues } from '../../data/leagues'
 
-export const Scoreboard_League = ({ leagueName, leagueLogo }) => {
+export const Scoreboard_League = () => {
+
+    let { leagueAlias } = useParams();
+
+    const league = leagues.find((league) => league.alias === leagueAlias);
+
 
     return (
         <Container fluid>
@@ -11,11 +18,10 @@ export const Scoreboard_League = ({ leagueName, leagueLogo }) => {
                 <Row>
                     <Col>
                         <h2 style={{ color: "white" }}>
-                            {leagueName} Results
+                            {league.name} Scoreboard
                         </h2>
                     </Col>
                     {/* <Col><Image src={leagueLogo} /></Col> */}
-                    <Col></Col>
                 </Row>
 
                 <Row>

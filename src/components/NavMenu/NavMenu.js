@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Navbar, NavDropdown, Form, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 import './NavMenu.css'
 
 
@@ -9,11 +9,11 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"
+            <Navbar collapseOnSelect expand="lg"
                 fixed='bottom' className='navbar--body'
             >
                 <Container>
-                    <Navbar.Brand href="/" >TOTO HBAR</Navbar.Brand>
+                    <Navbar.Brand href="/" className='navbar--logo'>TOTO HBAR</Navbar.Brand>
                     <Nav>
                         {!pairingData ?
                             <Nav.Link

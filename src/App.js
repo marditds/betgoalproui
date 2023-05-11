@@ -9,6 +9,7 @@ import { Profile } from './components/Profile/Profile'
 import { NotFound } from './components/404/NotFound';
 import { Predict_Entry } from './components/League/Predict_Entry';
 import { Scoreboard_League } from './components/League/Scoreboard_League';
+import { Club } from './components/Club';
 
 function App() {
 
@@ -77,6 +78,7 @@ function App() {
         </Route>
 
         <Route path='/leagues/:leagueAlias'>
+          <Route path=':clubAlias' element={<Club />} />
           <Route path='picks' element={<Predict_Entry />} />
           <Route path='scoreboard' element={<Scoreboard_League />} />
         </Route>

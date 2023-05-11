@@ -10,7 +10,7 @@ export const League = () => {
 
     let { leagueAlias } = useParams();
 
-    const league = leagues.find((league) => league.alias === leagueAlias)
+    const league = leagues?.find((league) => league.alias === leagueAlias)
 
     console.log(league.name);
 
@@ -39,8 +39,6 @@ export const League = () => {
                         </Col>
                     </Row>
                 </Link>
-
-
 
             </Container>
         </Container>
