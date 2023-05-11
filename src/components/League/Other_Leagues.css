@@ -1,7 +1,12 @@
 .other--leagues--link {
     color: white;
     text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
 }
+
+.other--leagues--link+.other--leagues--link {}
 
 .other--leagues--link:hover {
     color: #C69749;
