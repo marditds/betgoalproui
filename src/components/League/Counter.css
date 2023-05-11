@@ -9,6 +9,8 @@
     background-color: #282A3A !important;
     border-color: #735F32 !important;
     transition: 0.3s !important;
+    height: 38px;
+    width: 38px;
 }
 
 .counter--btn:active {
