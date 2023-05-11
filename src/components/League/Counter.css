@@ -1,4 +1,17 @@
-button {
+.counter--body {
+    width: 20px !important;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.counter--btn {
     background-color: #282A3A !important;
     border-color: #735F32 !important;
+    transition: 0.3s !important;
+}
+
+.counter--btn:active {
+    background-color: #735F32 !important;
+    border-color: #282A3A !important;
 }

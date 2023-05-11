@@ -22,7 +22,7 @@ export const Predict_Entry = () => {
             <Container>
                 <Back />
                 <h2>Make Your Picks for {league.name}</h2>
-                <Row>
+                <Row className='match--row'>
                     <Col className='d-flex justify-content-between'>
 
                         {league.clubs[1].name.split(" ").slice(0, 3).slice(0, 2).map((team, i) =>
@@ -47,7 +47,7 @@ export const Predict_Entry = () => {
                     </Col >
 
                 </Row>
-                <Row>
+                <Row className='match--row'>
                     <Col className='d-flex justify-content-between'>
 
                         {league.clubs[3].name.split(" ").slice(0, 2).map((team, i) =>
