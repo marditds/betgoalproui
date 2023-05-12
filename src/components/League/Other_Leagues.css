@@ -1,17 +1,40 @@
+.other--leagues--div {
+    border: 1px #282A3A solid;
+    border-radius: 10px;
+    /* width: 250px; */
+    transition: 0.3s;
+}
+
+.other--leagues--div:hover,
+.other--leagues--div:hover>.other--leagues--link--div {
+    /* border-color: #735F32; */
+}
+
+
+.other--leagues--link--div {
+    border-bottom: 1px solid #282A3A;
+    transition: 0.3s;
+}
+
+
+.other--leagues--link--div:last-child {
+    border-bottom: 0px;
+}
+
 .other--leagues--link {
+    padding-left: 20px;
     color: white;
     text-decoration: none;
     margin-top: 20px;
     margin-bottom: 20px;
     transition: 0.3s;
-}
+    /* border-bottom: 1px solid #282A3A; */
 
-.other--leagues--link+.other--leagues--link {}
+}
 
 .other--leagues--link:hover {
     color: #C69749;
 }
-
 
 .other--leagues--link:active {
     color: #735F32;
