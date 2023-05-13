@@ -158,7 +158,7 @@ export const Predict_Entry = ({ league }) => {
                         </Row>
                     </Form.Group>
                     <div className='d-flex justify-content-end mb-4 me-3'>
-                        <Button className="picks--btn--rst me-3" onClick={handleReset}>
+                        <Button className="picks--btn--rst me-3 ms-3 ms-sm-0" onClick={handleReset}>
                             Reset
                         </Button>
                         <Button type="submit" className="picks--btn--smbt">

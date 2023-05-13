@@ -1,5 +1,4 @@
 .counter--body {
-    /* width: 20px !important; */
     width: 40px !important;
     display: flex;
     align-self: center;
@@ -25,4 +24,15 @@
 .counter--btn:active {
     background-color: #735F32 !important;
     /* border-color: #282A3A !important; */
+}
+
+@media (max-width: 575px) {
+    .counter--btn {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    /* .counter--body {
+        margin: 115px 5px 5px 5px !important;
+    } */
 }

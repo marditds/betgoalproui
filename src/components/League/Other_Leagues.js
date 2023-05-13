@@ -5,7 +5,7 @@ import './Other_Leagues.css'
 
 export const Other_Leagues = ({ leagues }) => {
     return (
-        <Col lg={5}>
+        <Col lg={5} className='mt-4 mt-lg-0'>
             <h4 className='other--leagues--h4'>Other Leagues</h4>
             <Stack className='other--leagues--div'>
                 {leagues.map((tournoment, i) => {

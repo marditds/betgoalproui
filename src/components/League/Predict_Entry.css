@@ -1,35 +1,43 @@
-.predict--entry--form {
-    border: 1px #282A3A solid;
-    border-radius: 10px;
-}
+ .predict--entry--form {
+     border: 1px #282A3A solid;
+     border-radius: 10px;
+ }
 
-.predict--entry--form>.myFG {
-    border-bottom: 1px solid #282A3A !important;
-}
+ .predict--entry--form>.myFG {
+     border-bottom: 1px solid #282A3A !important;
+ }
 
-.predict--entry--form>.myFG:nth-last-child(2) {
-    border-bottom: 0px !important;
-}
+ .predict--entry--form>.myFG:nth-last-child(2) {
+     border-bottom: 0px !important;
+ }
 
-.picks--btn--rst {
-    background-color: transparent !important;
-    color: #FFFFFF !important;
-    border-color: #735F32 !important;
-}
+ .picks--btn--rst {
+     background-color: transparent !important;
+     color: #FFFFFF !important;
+     border-color: #735F32 !important;
+ }
 
-.picks--btn--rst:hover {
-    background-color: #282A3A !important;
-    color: #FFFFFF !important;
-    border-color: #735F32 !important;
-}
+ .picks--btn--rst:hover {
+     background-color: #282A3A !important;
+     color: #FFFFFF !important;
+     border-color: #735F32 !important;
+ }
 
-.picks--btn--smbt {
-    background-color: #735F32 !important;
-    border-color: #735F32 !important;
-    color: #000000 !important;
-}
+ .picks--btn--smbt {
+     background-color: #735F32 !important;
+     border-color: #735F32 !important;
+     color: #000000 !important;
+ }
 
-.picks--btn--smbt:hover {
-    border-color: #C69749 !important;
-    color: #FFFFFF !important;
-}
+ .picks--btn--smbt:hover {
+     border-color: #C69749 !important;
+     color: #FFFFFF !important;
+ }
+
+ @media (max-width: 575px) {
+
+     .picks--btn--rst,
+     .picks--btn--smbt {
+         width: 100%;
+     }
+ }

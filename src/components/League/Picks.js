@@ -16,7 +16,7 @@ export const Picks = () => {
 
     return (
         <Container fluid>
-            <Container>
+            <Container className='stuff'>
                 <Back />
 
                 <Row>

@@ -27,11 +27,6 @@ export const Counter = ({ value, onValueChange }) => {
         console.log('THIS IS TARGET', e.target.value);
     }
 
-    const handleReset = () => {
-        console.log('reset clicked!');
-        setCount((preVal) => 0);
-    }
-
     // const handleClickInc = () => {
     //     handleIncrease();
     //     onValueChange(value + 1);
@@ -49,11 +44,14 @@ export const Counter = ({ value, onValueChange }) => {
                 className='counter--body team--points p-0 my-0 mx-1
                  d-none
                  ' />
-            <Button onClick={handleIncrease} className='counter--btn'>+</Button>
-            <p className='counter--body team--points p-0 my-0 mx-1'>
-                {count}
-            </p>
-            <Button onClick={handleDecrease} className='counter--btn' disabled={count > 0 ? false : true}>-</Button>
+
+            <div className='d-grid d-sm-flex'>
+                <Button onClick={handleIncrease} className='counter--btn'>+</Button>
+                <p className='counter--body team--points p-0 my-2 my-sm-0 mx-1'>
+                    {count}
+                </p>
+                <Button onClick={handleDecrease} className='counter--btn' disabled={count > 0 ? false : true}>-</Button>
+            </div>
 
             {/* <Button onClick={handleReset}>RESET</Button> */}
         </div>
