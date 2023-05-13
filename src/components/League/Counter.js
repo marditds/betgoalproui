@@ -47,7 +47,7 @@ export const Counter = ({ value, onValueChange }) => {
             <Form.Control value={count} onChange={handleValueChange}
                 type='number' readOnly
                 className='counter--body team--points p-0 my-0 mx-1
-                 
+                 d-none
                  ' />
             <Button onClick={handleIncrease} className='counter--btn'>+</Button>
             <p className='counter--body team--points p-0 my-0 mx-1'>

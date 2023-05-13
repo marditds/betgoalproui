@@ -30,5 +30,6 @@
 }
 
 .picks--btn--smbt:hover {
+    border-color: #C69749 !important;
     color: #FFFFFF !important;
 }

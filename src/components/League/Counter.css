@@ -17,7 +17,12 @@
     width: 38px;
 }
 
+.counter--btn:hover {
+    border-color: #C69749 !important;
+}
+
+
 .counter--btn:active {
     background-color: #735F32 !important;
-    border-color: #282A3A !important;
+    /* border-color: #282A3A !important; */
 }
