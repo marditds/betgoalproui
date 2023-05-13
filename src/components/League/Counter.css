@@ -1,8 +1,12 @@
 .counter--body {
-    width: 20px !important;
+    /* width: 20px !important; */
+    width: 40px !important;
     display: flex;
     align-self: center;
     justify-content: center;
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
 }
 
 .counter--btn {

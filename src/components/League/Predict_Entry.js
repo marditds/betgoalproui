@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Row, Col, Form } from 'react-bootstrap'
+import React from 'react'
+import { Row, Col, Form, Button } from 'react-bootstrap'
 import { Counter } from './Counter';
 import './Predict_Entry.css'
 
@@ -7,27 +7,12 @@ import './Predict_Entry.css'
 
 export const Predict_Entry = ({ league }) => {
 
-
-    const [value, setValue] = useState(0);
-
-    const handleCounterChange = (val) => {
-        setValue((preVal) => val);
-    }
-
-    const handleValueChange = (e) => {
-        setValue((preVal) => e.target.value)
-    }
-
-    const onPointsChange = (e) => {
-        setValue((preVal) => e.target.value);
-    }
-
     console.log('PREDITCT');
     return (
         <Col>
             <h2>Make Your Picks for {league.name}</h2>
             <div className="predict--entry--div">
-                <Form>
+                <Form className='predict--entry--form'>
 
                     <Form.Group>
                         <Row className='match--row pt-4 pb-4'>
@@ -44,18 +29,20 @@ export const Predict_Entry = ({ league }) => {
                                         league.clubs[1].name
                                     }
                                 </Form.Label>
-                                <Form.Control
+                                {/* <Form.Control
                                     type='number'
                                     value={value}
                                     className='team--points'
-                                    onChange={handleValueChange}
-                                />
-                                <Counter value={value} onValueChange={handleCounterChange} />
+                                    readOnly
+                                /> */}
+                                <Counter />
 
                             </Col>
 
+                            {/* <span className='predict--entry--vs'>VS</span> */}
+
                             <Col className='d-flex justify-content-start align-items-center'>
-                                <Counter value={value} />
+                                <Counter />
 
                                 <Form.Label className='my-0 ms-3'>
                                     {league.clubs[7].name.split(" ").slice(0, 2).length > 1
@@ -76,87 +63,90 @@ export const Predict_Entry = ({ league }) => {
 
 
 
+                    <Form.Group>
+                        <Row className='match--row pt-4 pb-4'>
+                            <Col className='d-flex justify-content-end align-items-center'>
 
-                    <Row className='match--row pt-4 pb-4'>
-                        <Col className='d-flex justify-content-end align-items-center'>
+                                <Form.Label className='my-0 me-3'>
+                                    {league.clubs[3].name.split(" ").slice(0, 2).length > 1
+                                        ?
+                                        league.clubs[3].name.split(" ").slice(0, 2).map((team, i) =>
+                                            <React.Fragment key={i}>
+                                                {team.slice(0, 3)}
+                                                {" "}
+                                            </React.Fragment>
+                                        ) :
+                                        league.clubs[3].name
+                                    }
+                                </Form.Label>
+                                <Counter />
+                            </Col>
 
-                            <p className='my-0 me-3'>
-                                {league.clubs[3].name.split(" ").slice(0, 2).length > 1
-                                    ?
-                                    league.clubs[3].name.split(" ").slice(0, 2).map((team, i) =>
-                                        <React.Fragment key={i}>
-                                            {team.slice(0, 3)}
-                                            {" "}
-                                        </React.Fragment>
-                                    ) :
-                                    league.clubs[3].name
-                                }
-                            </p>
-                            <Counter value={value} />
+                            <Col className='d-flex justify-content-start align-items-center'>
 
-                        </Col>
+                                <Counter />
+                                <Form.Label className='my-0 ms-3'>
+                                    {league.clubs[6].name.split(" ").slice(0, 2).length > 1
+                                        ?
+                                        league.clubs[6].name.split(" ").slice(0, 2).map((team, i) =>
+                                            <React.Fragment key={i}>
+                                                {team.slice(0, 3)}
+                                                {" "}
+                                            </React.Fragment>
+                                        ) :
+                                        league.clubs[6].name
+                                    }
+                                </Form.Label>
+                            </Col>
 
-                        <Col className='d-flex justify-content-start align-items-center'>
-
-                            <Counter value={value} />
-
-                            <p className='my-0 ms-3'>
-                                {league.clubs[6].name.split(" ").slice(0, 2).length > 1
-                                    ?
-                                    league.clubs[6].name.split(" ").slice(0, 2).map((team, i) =>
-                                        <React.Fragment key={i}>
-                                            {team.slice(0, 3)}
-                                            {" "}
-                                        </React.Fragment>
-                                    ) :
-                                    league.clubs[6].name
-                                }
-                            </p>
-
-                        </Col>
-
-                    </Row>
+                        </Row>
+                    </Form.Group>
 
 
-                    <Row className='match--row pt-4 pb-4'>
-                        <Col className='d-flex justify-content-end align-items-center'>
+                    <Form.Group>
+                        <Row className='match--row pt-4 pb-4'>
+                            <Col className='d-flex justify-content-end align-items-center'>
 
-                            <p className='my-0 me-3'>
-                                {league.clubs[5].name.split(" ").slice(0, 2).length > 1
-                                    ?
-                                    league.clubs[5].name.split(" ").slice(0, 2).map((team, i) =>
-                                        <React.Fragment key={i}>
-                                            {team.slice(0, 3)}
-                                            {" "}
-                                        </React.Fragment>
-                                    ) :
-                                    league.clubs[5].name
-                                }
-                            </p>
-                            <Counter value={value} />
+                                <Form.Label className='my-0 me-3'>
+                                    {league.clubs[5].name.split(" ").slice(0, 2).length > 1
+                                        ?
+                                        league.clubs[5].name.split(" ").slice(0, 2).map((team, i) =>
+                                            <React.Fragment key={i}>
+                                                {team.slice(0, 3)}
+                                                {" "}
+                                            </React.Fragment>
+                                        ) :
+                                        league.clubs[5].name
+                                    }
+                                </Form.Label>
+                                <Counter />
 
-                        </Col>
+                            </Col>
 
-                        <Col className='d-flex justify-content-start align-items-center'>
+                            <Col className='d-flex justify-content-start align-items-center'>
 
-                            <Counter value={value} />
+                                <Counter />
 
-                            <p className='my-0 ms-3'>
-                                {league.clubs[4].name.split(" ").slice(0, 2).length > 1
-                                    ?
-                                    league.clubs[4].name.split(" ").slice(0, 2).map((team, i) =>
-                                        <React.Fragment key={i}>
-                                            {team.slice(0, 3)}
-                                            {" "}
-                                        </React.Fragment>
-                                    ) :
-                                    league.clubs[4].name
-                                }
-                            </p>
+                                <p className='my-0 ms-3'>
+                                    {league.clubs[4].name.split(" ").slice(0, 2).length > 1
+                                        ?
+                                        league.clubs[4].name.split(" ").slice(0, 2).map((team, i) =>
+                                            <React.Fragment key={i}>
+                                                {team.slice(0, 3)}
+                                                {" "}
+                                            </React.Fragment>
+                                        ) :
+                                        league.clubs[4].name
+                                    }
+                                </p>
 
-                        </Col>
+                            </Col>
 
-                    </Row>
+                        </Row>
+                    </Form.Group>
+                    <Button type="submit">
+                        Submit
+                    </Button>
                 </Form>
             </div>
         </Col >
