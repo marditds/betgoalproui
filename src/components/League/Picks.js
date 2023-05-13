@@ -19,7 +19,6 @@ export const Picks = () => {
             <Container>
                 <Back />
 
-
                 <Row>
 
                     <Predict_Entry league={league} />

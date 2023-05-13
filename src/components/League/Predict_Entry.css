@@ -1,3 +1,14 @@
+.predict--entry--div {
+    border: 1px #282A3A solid;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .match--row {
-    margin-bottom: 20px;
+    border-bottom: 1px #282A3A solid;
+}
+
+.match--row:last-child {
+    border-bottom: 0px;
 }

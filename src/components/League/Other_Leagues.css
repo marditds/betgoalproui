@@ -1,15 +1,12 @@
+.other--leagues--h4 {
+    line-height: 38.39px;
+}
+
 .other--leagues--div {
     border: 1px #282A3A solid;
     border-radius: 10px;
-    /* width: 250px; */
     transition: 0.3s;
 }
-
-.other--leagues--div:hover,
-.other--leagues--div:hover>.other--leagues--link--div {
-    /* border-color: #735F32; */
-}
-
 
 .other--leagues--link--div {
     border-bottom: 1px solid #282A3A;
