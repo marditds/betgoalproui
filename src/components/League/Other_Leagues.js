@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Stack, Row, Col } from 'react-bootstrap';
+import { Stack, Col } from 'react-bootstrap';
 import './Other_Leagues.css'
 
 export const Other_Leagues = ({ leagues }) => {

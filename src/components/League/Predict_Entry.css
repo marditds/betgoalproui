@@ -1,37 +1,34 @@
-.predict--entry--div {
+.predict--entry--form {
     border: 1px #282A3A solid;
     border-radius: 10px;
-    padding-left: 12px;
-    padding-right: 12px;
 }
 
-/* .predict--entry--form>div {
-    border-bottom: 1px #282A3A solid;
+.predict--entry--form>.myFG {
+    border-bottom: 1px solid #282A3A !important;
 }
 
-
-.match--row {
-    border-bottom: 1px #282A3A solid;
-}
- */
-
-.match--row:first-of-type:not(:last-of-type),
-.match--row:not(:first-of-type):not(:last-of-type) {
-    border-bottom: 1px solid #FFFFFF !important;
-}
-
-
-/*
-.match--row+.match--row {
-    border-bottom: 3px solid #FFFFFF !important;
-}
-
-.match--row:first-child {
+.predict--entry--form>.myFG:nth-last-child(2) {
     border-bottom: 0px !important;
-} */
+}
 
-/* 
-.predict--entry--vs {
-    width: fit-content !important;
-    align-self: center;
-} */
+.picks--btn--rst {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border-color: #735F32 !important;
+}
+
+.picks--btn--rst:hover {
+    background-color: #282A3A !important;
+    color: #FFFFFF !important;
+    border-color: #735F32 !important;
+}
+
+.picks--btn--smbt {
+    background-color: #735F32 !important;
+    border-color: #735F32 !important;
+    color: #000000 !important;
+}
+
+.picks--btn--smbt:hover {
+    color: #FFFFFF !important;
+}

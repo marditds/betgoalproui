@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Row, Col, Form, Button } from 'react-bootstrap'
 import { Counter } from './Counter';
 import './Predict_Entry.css'
@@ -7,6 +7,15 @@ import './Predict_Entry.css'
 
 export const Predict_Entry = ({ league }) => {
 
+    const [value, setValue] = useState(0);
+    const [resetKey, setResetKey] = useState(0);
+
+    const handleReset = () => {
+        console.log('reset clicked!');
+        setValue((preVal) => 0);
+        setResetKey((preVal) => preVal + 1);
+    }
+
     console.log('PREDITCT');
     return (
         <Col>
@@ -14,7 +23,7 @@ export const Predict_Entry = ({ league }) => {
             <div className="predict--entry--div">
                 <Form className='predict--entry--form'>
 
-                    <Form.Group>
+                    <Form.Group className='myFG'>
                         <Row className='match--row pt-4 pb-4'>
                             <Col className='d-flex justify-content-end align-items-center '>
                                 <Form.Label className='my-0 me-3'>
@@ -35,14 +44,13 @@ export const Predict_Entry = ({ league }) => {
                                     className='team--points'
                                     readOnly
                                 /> */}
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
 
                             </Col>
 
-                            {/* <span className='predict--entry--vs'>VS</span> */}
 
                             <Col className='d-flex justify-content-start align-items-center'>
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
 
                                 <Form.Label className='my-0 ms-3'>
                                     {league.clubs[7].name.split(" ").slice(0, 2).length > 1
@@ -63,7 +71,8 @@ export const Predict_Entry = ({ league }) => {
 
 
 
-                    <Form.Group>
+                    <Form.Group className='myFG'>
+
                         <Row className='match--row pt-4 pb-4'>
                             <Col className='d-flex justify-content-end align-items-center'>
 
@@ -79,12 +88,13 @@ export const Predict_Entry = ({ league }) => {
                                         league.clubs[3].name
                                     }
                                 </Form.Label>
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
                             </Col>
 
                             <Col className='d-flex justify-content-start align-items-center'>
 
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
+
                                 <Form.Label className='my-0 ms-3'>
                                     {league.clubs[6].name.split(" ").slice(0, 2).length > 1
                                         ?
@@ -103,7 +113,8 @@ export const Predict_Entry = ({ league }) => {
                     </Form.Group>
 
 
-                    <Form.Group>
+                    <Form.Group className='myFG'>
+
                         <Row className='match--row pt-4 pb-4'>
                             <Col className='d-flex justify-content-end align-items-center'>
 
@@ -119,13 +130,15 @@ export const Predict_Entry = ({ league }) => {
                                         league.clubs[5].name
                                     }
                                 </Form.Label>
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
+
 
                             </Col>
 
                             <Col className='d-flex justify-content-start align-items-center'>
 
-                                <Counter />
+                                <Counter key={`${value}-${resetKey}`} value={value} />
+
 
                                 <p className='my-0 ms-3'>
                                     {league.clubs[4].name.split(" ").slice(0, 2).length > 1
@@ -144,9 +157,14 @@ export const Predict_Entry = ({ league }) => {
 
                         </Row>
                     </Form.Group>
-                    <Button type="submit">
-                        Submit
-                    </Button>
+                    <div className='d-flex justify-content-end mb-4 me-3'>
+                        <Button className="picks--btn--rst me-3" onClick={handleReset}>
+                            Reset
+                        </Button>
+                        <Button type="submit" className="picks--btn--smbt">
+                            Submit
+                        </Button>
+                    </div>
                 </Form>
             </div>
         </Col >
