@@ -9,11 +9,11 @@ export const Leagues = () => {
         <Container className='leagues--fluid--container' fluid>
             <Container>
 
-                <Row className='d-none d-md-flex justify-content-lg-evenly justify-content-md-start leagues--row'>
+                <Row className='d-none d-sm-flex justify-content-lg-evenly justify-content-md-start leagues--row'>
                     <h3>Leagues</h3>
                     {leagues.map((league) => {
                         return (
-                            <Col key={league.id} md={4} lg={2} className=' my-3'>
+                            <Col key={league.id} sm={6} md={4} lg={2} className=' my-3'>
                                 <Link to={`/leagues/${league.alias}`}>
                                     <Image src={league.logo} fluid className='club--logo' />
                                 </Link>
@@ -22,7 +22,7 @@ export const Leagues = () => {
                     })}
                 </Row>
 
-                <Row className='d-block d-md-none'>
+                <Row className='d-block d-sm-none'>
                     <Accordion>
                         <Accordion.Item className='leagues--accordion--item'>
                             <Accordion.Header className='leagues--accordion--header'>

@@ -158,6 +158,10 @@
      .current--match--col {
          padding: 30px;
      }
+
+     .club--logo {
+         /* aspect-ratio: 0; */
+     }
  }
 
  @media (max-width: 767px) and (min-width: 576px) {
