@@ -24,6 +24,9 @@ body {
     box-shadow: 0 0 !important;
 }
 
+.profile--btns>button {
+    border-radius: 10px !important;
+}
 
 .profile--btns>button+button {
     margin-left: 10px;
@@ -40,7 +43,7 @@ body {
 
 .profile--save--btn {
     background-color: #735F32 !important;
-    border-color: black !important;
+    border-color: #735F32 !important;
 }
 
 @media (max-width: 375px) {
