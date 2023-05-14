@@ -24,10 +24,6 @@ body {
     box-shadow: 0 0 !important;
 }
 
-.profile--btns>button {
-    background-color: black !important;
-    border-color: #735F32 !important;
-}
 
 .profile--btns>button+button {
     margin-left: 10px;
@@ -37,10 +33,14 @@ body {
     background-color: #282A3A !important;
 }
 
-@media (max-width: 575px) {
-    .profile--btns>button+button {
-        /* margin-left: 0px; */
-    }
+.profile--dscnnct--btn {
+    background-color: black !important;
+    border-color: #735F32 !important;
+}
+
+.profile--save--btn {
+    background-color: #735F32 !important;
+    border-color: black !important;
 }
 
 @media (max-width: 375px) {

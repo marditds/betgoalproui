@@ -129,9 +129,11 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
 
                                 <Col className='d-flex justify-content-sm-end justify-content-evenly align-items-end profile--btns'>
 
-                                    <Button onClick={() => disconnectPairing(pairingData)}>Disconnect Wallet</Button>
+                                    <Button
+                                        className='profile--dscnnct--btn'
+                                        onClick={() => disconnectPairing(pairingData)}>Disconnect Wallet</Button>
 
-                                    <Button type='submit' onClick={handleSaveChanges}>Save Changes</Button>
+                                    <Button className='profile--save--btn' type='submit' onClick={handleSaveChanges}>Save Changes</Button>
 
                                 </Col>
                             </Row>
