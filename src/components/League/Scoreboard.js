@@ -1,14 +1,12 @@
-import React from 'react';
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap';
 import { leagues } from '../../data/leagues';
 import { Back } from '../Back-Btn/Back';
-import { PredictEntry } from './PredictEntry';
-import { OtherLeaguesPicks } from './OtherLeaguesPicks';
-import './Picks.css';
+import { ScoreboardLeague } from './ScoreboardLeague';
+import { OtherLeaguesScoreboard } from './OtherLeaguesScoreboard';
 
-
-export const Picks = () => {
+export const Scoreboard = () => {
 
     let { leagueAlias } = useParams();
 
@@ -20,11 +18,9 @@ export const Picks = () => {
                 <Back />
 
                 <Row>
+                    <ScoreboardLeague league={league} />
 
-                    <PredictEntry league={league} />
-
-                    <OtherLeaguesPicks leagues={leagues} />
-
+                    <OtherLeaguesScoreboard leagues={leagues} />
                 </Row>
             </Container>
         </Container>
