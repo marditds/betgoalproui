@@ -19,3 +19,18 @@
 .sb--table>table>tbody>tr:hover {
     color: #735F32;
 }
+
+.win--btn, .lose--btn, .pts--btn {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: transparent !important;
+    border: 0px !important;
+    padding: 0 !important;
+    font-weight: bolder !important;
+}
+
+.win--btn:hover,
+.lose--btn:hover,
+.pts--btn:hover {
+    color: #735F32 !important;
+}

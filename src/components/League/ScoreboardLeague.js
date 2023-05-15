@@ -29,6 +29,26 @@ export const ScoreboardLeague = ({ league }) => {
         console.log(temp);
     }
 
+    const sortLoss = (param) => {
+        let temp = [...param].sort((a, b) => {
+            return (
+                a.lose < b.lose ? 1 : -1
+            )
+        })
+        setClubs(prevData => temp);
+        console.log(temp);
+    }
+
+    const sortPoints = (param) => {
+        let temp = [...param].sort((a, b) => {
+            return (
+                a.points < b.points ? 1 : -1
+            )
+        })
+        setClubs(prevData => temp);
+        console.log(temp);
+    }
+
     useEffect(() => {
         setClubs((preVal) => league.clubs);
     }, [league.clubs]);
@@ -40,17 +60,35 @@ export const ScoreboardLeague = ({ league }) => {
                 {league?.name} Scoreboard
             </h2>
 
-            <Button onClick={() => sortWins(clubs)}>Sort By Wins</Button>
-
             <div className='sb--table' style={{ borderRadius: '10px' }}>
                 <Table>
 
                     <thead>
                         <tr>
                             <th>Club</th>
-                            <th>W</th>
-                            <th>L</th>
-                            <th>P</th>
+                            <th>
+                                <Button
+                                    onClick={() => sortWins(clubs)}
+                                    className='win--btn'
+                                >
+                                    W
+                                </Button>
+                            </th>
+                            <th>
+                                <Button
+                                    onClick={() => sortLoss(clubs)}
+                                    className='lose--btn'
+                                >
+                                    L
+                                </Button>
+                            </th>
+                            <th>
+                                <Button
+                                    onClick={() => sortPoints(clubs)}
+                                    className='pts--btn'
+                                >P
+                                </Button>
+                            </th>
                         </tr>
                     </thead>
 

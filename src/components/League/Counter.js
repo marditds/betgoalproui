@@ -7,7 +7,7 @@ export const Counter = ({ value, onValueChange }) => {
     const [count, setCount] = useState(value);
 
     useEffect(() => {
-        setCount((preVal) => preVal);
+        setCount((preVal) => value);
     }, [value]);
 
     const handleIncrease = () => {
