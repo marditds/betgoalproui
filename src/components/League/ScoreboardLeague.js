@@ -27,18 +27,20 @@ export const ScoreboardLeague = ({ league }) => {
                         league?.clubs?.map((club, i) => {
                             return (
                                 <tr key={i}>
-                                    <td>
-                                        {club.name.split(" ").slice(0, 2).length > 1
-                                            ?
-                                            club.name.split(" ").slice(0, 2).map((team, i) =>
-                                                <React.Fragment key={i}>
-                                                    {team.slice(0, 3)}
-                                                    {" "}
-                                                </React.Fragment>
-                                            ) :
-                                            club.name
+                                    <td className='d-block d-sm-none'>
+                                        {
+                                            club.name.split(" ").slice(0, 2).length > 1
+                                                ?
+                                                club.name.split(" ").slice(0, 2).map((team, i) =>
+                                                    <React.Fragment key={i}>
+                                                        {team.slice(0, 3)}
+                                                        {" "}
+                                                    </React.Fragment>
+                                                ) :
+                                                club.name
                                         }
                                     </td>
+                                    <td className='d-none d-sm-block'>{club.name}</td>
                                     <td>{club.win}</td>
                                     <td>{club.lose}</td>
                                     <td>{club.points}</td>
