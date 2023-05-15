@@ -4,6 +4,9 @@
     padding: 10px 20px 10px 20px;
     border: 1px solid #282A3A;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.3s;
 }
 

@@ -2,8 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { leagues } from '../../data/leagues';
-import { Back } from '../Back-Btn/Back';
+import { leagues } from '../../../data/leagues';
+import { Back } from '../../Back-Btn/Back';
 import { ScoreboardLeague } from './ScoreboardLeague';
 import { OtherLeaguesScoreboard } from './OtherLeaguesScoreboard';
 import './Scoreboard.css';
@@ -22,16 +22,16 @@ export const Scoreboard = () => {
                 <Row>
                     <ScoreboardLeague league={league} />
 
-                    <Col lg={5} className='mt-4 mt-lg-0'>
+                    <Col lg={5} className='mt-4 mt-lg-0  d-flex flex-column-reverse flex-lg-column'>
                         <OtherLeaguesScoreboard leagues={leagues} />
 
                         <Row>
-                            <Col className='mt-3 mb-2'>
+                            <Col className='mt-3 mb-3'>
                                 <Link
                                     to={`/leagues/${league.alias}/picks`}
                                     className='sb--btn'
                                 >
-                                    Make Your Picks
+                                    Make Your Picks for {league.name}
                                 </Link>
                                 {/* /leagues/Bundesliga/picks */}
                             </Col>
