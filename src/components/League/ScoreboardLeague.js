@@ -19,6 +19,14 @@ export const ScoreboardLeague = ({ league }) => {
 
     // console.log('THIS IS CLUBS:', clubs);
 
+    const sortABC = (param) => {
+        let temp = [...param].sort((a, b) => {
+            return a.name.localeCompare(b.name);
+        });
+        setClubs(prevData => temp);
+        console.log(temp);
+    };
+
     const sortWins = (param) => {
         let temp = [...param].sort((a, b) => {
             return (
@@ -65,7 +73,14 @@ export const ScoreboardLeague = ({ league }) => {
 
                     <thead>
                         <tr>
-                            <th>Club</th>
+                            <th>
+                                <Button
+                                    onClick={() => sortABC(clubs)}
+                                    className='abc--btn'
+                                >
+                                    Club
+                                </Button>
+                            </th>
                             <th>
                                 <Button
                                     onClick={() => sortWins(clubs)}

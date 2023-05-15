@@ -37,7 +37,10 @@ tr td:not(:first-child):not(:nth-child(2)) {
     color: #735F32;
 }
 
-.win--btn, .lose--btn, .pts--btn {
+.abc--btn,
+.win--btn,
+.lose--btn,
+.pts--btn {
     cursor: pointer;
     transition: 0.3s;
     background-color: transparent !important;
@@ -46,6 +49,7 @@ tr td:not(:first-child):not(:nth-child(2)) {
     font-weight: bolder !important;
 }
 
+.abc--btn:hover,
 .win--btn:hover,
 .lose--btn:hover,
 .pts--btn:hover {
