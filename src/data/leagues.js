@@ -11,8 +11,8 @@ export const leagues = [
                 name: 'AC Milan',
                 alias: 'AC_Milan',
                 win: 2,
-                lose: 0,
-                points: 0
+                lose: 2,
+                points: 6
             },
             {
                 id: 2,
@@ -20,7 +20,7 @@ export const leagues = [
                 alias: 'Atalanta',
                 win: 2,
                 lose: 0,
-                points: 0
+                points: 6
             },
             {
                 id: 3,
@@ -28,7 +28,7 @@ export const leagues = [
                 alias: 'Bologna',
                 win: 5,
                 lose: 0,
-                points: 0
+                points: 15
             },
             {
                 id: 4,
@@ -36,7 +36,7 @@ export const leagues = [
                 alias: 'Cremonese',
                 win: 4,
                 lose: 0,
-                points: 0
+                points: 12
             },
             {
                 id: 5,
@@ -44,7 +44,7 @@ export const leagues = [
                 alias: 'Empoli',
                 win: 1,
                 lose: 0,
-                points: 0
+                points: 3
             },
             {
                 id: 6,
@@ -60,7 +60,7 @@ export const leagues = [
                 alias: 'Hellas_Verona',
                 win: 1,
                 lose: 0,
-                points: 0
+                points: 3
             },
             {
                 id: 8,
@@ -68,7 +68,7 @@ export const leagues = [
                 alias: 'Inter_Milan',
                 win: 1,
                 lose: 0,
-                points: 0
+                points: 3
             },
             {
                 id: 9,
@@ -76,7 +76,7 @@ export const leagues = [
                 alias: 'Juventus',
                 win: 2,
                 lose: 0,
-                points: 0
+                points: 6
             },
             {
                 id: 10,
@@ -108,7 +108,7 @@ export const leagues = [
                 alias: 'Napoli',
                 win: 2,
                 lose: 0,
-                points: 0
+                points: 6
             },
             {
                 id: 14,
@@ -132,7 +132,7 @@ export const leagues = [
                 alias: 'Sampdoria',
                 win: 3,
                 lose: 0,
-                points: 0
+                points: 9
             },
             {
                 id: 17,
@@ -140,7 +140,7 @@ export const leagues = [
                 alias: 'Sassuolo',
                 win: 1,
                 lose: 0,
-                points: 0
+                points: 3
             },
             {
                 id: 18,
@@ -164,7 +164,7 @@ export const leagues = [
                 alias: 'Udinese',
                 win: 2,
                 lose: 0,
-                points: 0
+                points: 6
             }
         ]
     },
@@ -178,25 +178,25 @@ export const leagues = [
                 id: 1,
                 name: "B. M'gladbach",
                 alias: "B._M'gladbach",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 2,
+                points: 3
             },
             {
                 id: 2,
                 name: "Bayern Munich",
                 alias: "Bayern_Munich",
-                win: 0,
+                win: 3,
                 lose: 0,
-                points: 0
+                points: 9
             },
             {
                 id: 3,
                 name: "Dortmund",
                 alias: "Dortmund",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 1,
+                points: 3
             },
             {
                 id: 4,
@@ -219,32 +219,32 @@ export const leagues = [
                 name: "FC Köln",
                 alias: "FC_Köln",
                 win: 0,
-                lose: 0,
+                lose: 1,
                 points: 0
             },
             {
                 id: 7,
                 name: "FC Schalke 04",
                 alias: "FC_Schalke_04",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 1,
+                points: 3
             },
             {
                 id: 8,
                 name: "FC Union Berlin",
                 alias: "FC_Union_Berlin",
                 win: 0,
-                lose: 0,
+                lose: 2,
                 points: 0
             },
             {
                 id: 9,
                 name: "FSV Mainz 05",
                 alias: "FSV_Mainz_05",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 3,
+                lose: 1,
+                points: 9
             },
             {
                 id: 10,
@@ -266,41 +266,41 @@ export const leagues = [
                 id: 12,
                 name: "Leverkusen",
                 alias: "Leverkusen",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 1,
+                points: 6
             },
             {
                 id: 13,
                 name: "RB Leipzig",
                 alias: "RB_Leipzig",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 14,
                 name: "SC Freiburg",
                 alias: "SC_Freiburg",
                 win: 0,
-                lose: 0,
+                lose: 4,
                 points: 0
             },
             {
                 id: 15,
                 name: "VfB Stuttgart",
                 alias: "VfB_Stuttgart",
-                win: 0,
+                win: 4,
                 lose: 0,
-                points: 0
+                points: 12
             },
             {
                 id: 16,
                 name: "VfL Bochum",
                 alias: "VfL_Bochum",
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 1,
+                points: 6
             },
             {
                 id: 17,
@@ -330,81 +330,81 @@ export const leagues = [
             id: 1,
             name: 'Arsenal',
             alias: 'Arsenal',
-            win: 0,
+            win: 3,
             lose: 0,
-            points: 0
+            points: 9
         },
         {
             id: 2,
             name: 'Aston Villa FC',
             alias: 'Aston_Villa_FC',
             win: 0,
-            lose: 0,
+            lose: 1,
             points: 0
         },
         {
             id: 3,
             name: 'Bournemouth AFC',
             alias: 'Bournemouth_AFC',
-            win: 0,
+            win: 1,
             lose: 0,
-            points: 0
+            points: 3
         },
         {
             id: 4,
             name: 'Brentford',
             alias: 'Brentford',
             win: 0,
-            lose: 0,
+            lose: 3,
             points: 0
         },
         {
             id: 5,
             name: 'Brighton & Hove Albion',
             alias: 'Brighton_&_Hove_Albion',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 1,
+            lose: 1,
+            points: 3
         },
         {
             id: 6,
             name: 'Chelsea',
             alias: 'Chelsea',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 5,
+            lose: 1,
+            points: 15
         },
         {
             id: 7,
             name: 'Crystal Palace',
             alias: 'Crystal_Palace',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 1,
+            lose: 2,
+            points: 3
         },
         {
             id: 8,
             name: 'Everton FC',
             alias: 'Everton_FC',
-            win: 0,
+            win: 3,
             lose: 0,
-            points: 0
+            points: 9
         },
         {
             id: 9,
             name: 'Fulham',
             alias: 'Fulham',
             win: 0,
-            lose: 0,
+            lose: 5,
             points: 0
         },
         {
             id: 10,
             name: 'Leicester City FC',
             alias: 'Leicester_City_FC',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 2,
+            lose: 3,
+            points: 6
         },
         {
             id: 11,
@@ -418,25 +418,25 @@ export const leagues = [
             id: 12,
             name: 'Liverpool FC',
             alias: 'Liverpool_FC',
-            win: 0,
+            win: 2,
             lose: 0,
-            points: 0
+            points: 6
         },
         {
             id: 13,
             name: 'Manchester City FC',
             alias: 'Manchester_City_FC',
             win: 0,
-            lose: 0,
+            lose: 3,
             points: 0
         },
         {
             id: 14,
             name: 'Manchester United FC',
             alias: 'Manchester_United_FC',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 2,
+            lose: 2,
+            points: 6
         },
         {
             id: 15,
@@ -450,9 +450,9 @@ export const leagues = [
             id: 16,
             name: 'Nottingham Forest',
             alias: 'Nottingham_Forest',
-            win: 0,
+            win: 4,
             lose: 0,
-            points: 0
+            points: 12
         },
         {
             id: 17,
@@ -473,17 +473,17 @@ export const leagues = [
             id: 19,
             name: 'West Ham United',
             alias: 'West_Ham_United',
-            win: 0,
-            lose: 0,
-            points: 0
+            win: 3,
+            lose: 3,
+            points: 6
         },
         {
             id: 20,
             name: 'Wolverhampton Wanderers',
             alias: 'Wolverhampton_Wanderers',
-            win: 0,
+            win: 1,
             lose: 0,
-            points: 0
+            points: 3
         }]
     },
     {
@@ -496,33 +496,33 @@ export const leagues = [
                 id: 1,
                 name: 'Almería',
                 alias: 'Almería',
-                win: 0,
+                win: 1,
                 lose: 0,
-                points: 0
+                points: 3
             },
             {
                 id: 2,
                 name: 'Athletic',
                 alias: 'Athletic',
                 win: 0,
-                lose: 0,
+                lose: 2,
                 points: 0
             },
             {
                 id: 3,
                 name: 'Atlético Madrid',
                 alias: 'Atlético_Madrid',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 3,
+                lose: 1,
+                points: 9
             },
             {
                 id: 4,
                 name: 'Barcelona',
                 alias: 'Barcelona',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 2,
+                points: 3
             },
             {
                 id: 5,
@@ -536,25 +536,25 @@ export const leagues = [
                 id: 6,
                 name: 'Cádiz',
                 alias: 'Cádiz',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 3,
+                lose: 3,
+                points: 9
             },
             {
                 id: 7,
                 name: 'Celta Vigo',
                 alias: 'Celta_Vigo',
-                win: 0,
+                win: 5,
                 lose: 0,
-                points: 0
+                points: 15
             },
             {
                 id: 8,
                 name: 'Elche',
                 alias: 'Elche',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 1,
+                points: 6
             },
             {
                 id: 9,
@@ -576,9 +576,9 @@ export const leagues = [
                 id: 11,
                 name: 'Girona',
                 alias: 'Girona',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 1,
+                points: 3
             },
             {
                 id: 12,
@@ -592,9 +592,9 @@ export const leagues = [
                 id: 13,
                 name: 'Osasuna',
                 alias: 'Osasuna',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 14,
@@ -608,9 +608,9 @@ export const leagues = [
                 id: 15,
                 name: 'Real Madrid',
                 alias: 'Real_Madrid',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 16,
@@ -632,9 +632,9 @@ export const leagues = [
                 id: 18,
                 name: 'Valencia',
                 alias: 'Valencia',
-                win: 0,
+                win: 6,
                 lose: 0,
-                points: 0
+                points: 18
             },
             {
                 id: 19,
@@ -681,64 +681,64 @@ export const leagues = [
                 name: 'Angers Sco',
                 alias: 'Angers_Sco',
                 win: 0,
-                lose: 0,
+                lose: 1,
                 points: 0
             },
             {
                 id: 4,
                 name: 'As Monaco',
                 alias: 'As_Monaco',
-                win: 0,
+                win: 3,
                 lose: 0,
-                points: 0
+                points: 9
             },
             {
                 id: 5,
                 name: 'Clermont Foot 63',
                 alias: 'Clermont_Foot_63',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 6,
                 name: 'Estac Troyes',
                 alias: 'Estac_Troyes',
-                win: 0,
+                win: 1,
                 lose: 0,
-                points: 0
+                points: 1
             },
             {
                 id: 7,
                 name: 'Fc Lorient',
                 alias: 'Fc_Lorient',
-                win: 0,
+                win: 3,
                 lose: 0,
-                points: 0
+                points: 9
             },
             {
                 id: 8,
                 name: 'Fc Nantes',
                 alias: 'Fc_Nantes',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 5,
+                lose: 2,
+                points: 15
             },
             {
                 id: 9,
                 name: 'Losc Lille',
                 alias: 'Losc_Lille',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 3,
+                points: 3
             },
             {
                 id: 10,
                 name: 'Montpellier Hérault Sc',
                 alias: 'Montpellier_Hérault_Sc',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 11,
@@ -760,9 +760,9 @@ export const leagues = [
                 id: 13,
                 name: 'Olympique Lyonnais',
                 alias: 'Olympique_Lyonnais',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 2,
+                lose: 2,
+                points: 6
             },
             {
                 id: 14,
@@ -776,9 +776,9 @@ export const leagues = [
                 id: 15,
                 name: 'Rc Lens',
                 alias: 'Rc_Lens',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 1,
+                points: 3
             },
             {
                 id: 16,
@@ -800,25 +800,25 @@ export const leagues = [
                 id: 18,
                 name: 'Stade De Reims',
                 alias: 'Stade_De_Reims',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 3,
+                lose: 3,
+                points: 9
             },
             {
                 id: 19,
                 name: 'Stade Rennais Fc',
                 alias: 'Stade_Rennais_Fc',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 1,
+                lose: 1,
+                points: 3
             },
             {
                 id: 20,
                 name: 'Toulouse Fc',
                 alias: 'Toulouse_Fc',
-                win: 0,
-                lose: 0,
-                points: 0
+                win: 4,
+                lose: 2,
+                points: 12
             }
         ]
     }

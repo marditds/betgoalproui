@@ -9,11 +9,28 @@
     border-color: #282A3A !important;
 }
 
-.sb--table>table>thead>tr>th,
+.sb--table thead th {
+    border-bottom: 1px solid #282A3A !important;
+    padding-left: 20px !important;
+    height: 64px !important;
+    vertical-align: middle !important;
+    transition: 0.3s;
+}
+
+.sb--table>table>tbody>tr {
+    border-bottom: 1px solid #282A3A !important;
+}
+
 .sb--table>table>tbody>tr>td {
     padding-top: 12px !important;
     padding-bottom: 12px !important;
+    padding-left: 20px !important;
     transition: 0.3s;
+}
+
+
+tr td:not(:first-child):not(:nth-child(2)) {
+    width: 70px !important;
 }
 
 .sb--table>table>tbody>tr:hover {

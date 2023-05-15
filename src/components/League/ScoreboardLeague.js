@@ -17,7 +17,7 @@ export const ScoreboardLeague = ({ league }) => {
     const [clubs, setClubs] = useState(league.clubs)
 
 
-    console.log('THIS IS CLUBS:', clubs);
+    // console.log('THIS IS CLUBS:', clubs);
 
     const sortWins = (param) => {
         let temp = [...param].sort((a, b) => {
@@ -60,8 +60,8 @@ export const ScoreboardLeague = ({ league }) => {
                 {league?.name} Scoreboard
             </h2>
 
-            <div className='sb--table' style={{ borderRadius: '10px' }}>
-                <Table>
+            <div className='sb--table' >
+                <Table borderless>
 
                     <thead>
                         <tr>
