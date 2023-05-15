@@ -29,7 +29,7 @@ export const Picks = () => {
                         <OtherLeaguesPicks leagues={leagues} />
 
                         <Row>
-                            <Col className='mt-3 mb-3'>
+                            <Col className='mt-0 mt-lg-3 mb-3'>
                                 <Link
                                     to={`/leagues/${league.alias}/scoreboard`}
                                     className='picks--btn'

@@ -20,13 +20,14 @@ export const Scoreboard = () => {
                 <Back />
 
                 <Row>
+
                     <ScoreboardLeague league={league} />
 
-                    <Col lg={5} className='mt-4 mt-lg-0  d-flex flex-column-reverse flex-lg-column'>
+                    <Col lg={5} className='mt-4 mt-lg-0 d-flex flex-column-reverse flex-lg-column'>
                         <OtherLeaguesScoreboard leagues={leagues} />
 
                         <Row>
-                            <Col className='mt-3 mb-3'>
+                            <Col className='mt-0 mt-lg-3 mb-3'>
                                 <Link
                                     to={`/leagues/${league.alias}/picks`}
                                     className='sb--btn'

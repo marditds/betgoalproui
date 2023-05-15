@@ -17,9 +17,15 @@
     transition: 0.3s;
 }
 
-.sb--table>table>tbody>tr {
+.sb--table>table>tbody>tr:not(:last-child) {
+    /* .sb--table>table>tbody>tr { */
     border-bottom: 1px solid #282A3A !important;
 }
+
+.sb--table>table>tbody>tr:last-child td {
+    padding-bottom: 0px !important;
+}
+
 
 .sb--table>table>tbody>tr>td {
     padding-top: 12px !important;
