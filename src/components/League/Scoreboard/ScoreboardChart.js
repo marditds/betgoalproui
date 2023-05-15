@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Table, Button } from 'react-bootstrap';
-import './ScoreboardLeague.css';
+import { BsFillCaretDownFill } from 'react-icons/bs';
+import './ScoreboardChart.css';
 
 
 // import { leagues } from '../../data/leagues';
 // import { useParams } from 'react-router-dom'
 
-// export const ScoreboardLeague = ({ league }) => {
-export const ScoreboardLeague = ({ league }) => {
+// export const ScoreboardChart = ({ league }) => {
+export const ScoreboardChart = ({ league }) => {
 
     // let { leagueAlias } = useParams();
 
@@ -82,6 +83,7 @@ export const ScoreboardLeague = ({ league }) => {
                                     className='abc--btn'
                                 >
                                     Club
+                                    <BsFillCaretDownFill className='ms-2' />
                                 </Button>
                             </th>
                             <th>
@@ -90,6 +92,7 @@ export const ScoreboardLeague = ({ league }) => {
                                     className='win--btn'
                                 >
                                     W
+                                    <BsFillCaretDownFill className='ms-2' />
                                 </Button>
                             </th>
                             <th>
@@ -98,13 +101,16 @@ export const ScoreboardLeague = ({ league }) => {
                                     className='lose--btn'
                                 >
                                     L
+                                    <BsFillCaretDownFill className='ms-2' />
                                 </Button>
                             </th>
                             <th>
                                 <Button
                                     onClick={() => sortPoints(clubs)}
                                     className='pts--btn'
-                                >P
+                                >
+                                    P
+                                    <BsFillCaretDownFill className='ms-2' />
                                 </Button>
                             </th>
                         </tr>

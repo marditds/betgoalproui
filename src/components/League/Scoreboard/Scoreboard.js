@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { leagues } from '../../../data/leagues';
 import { Back } from '../../Back-Btn/Back';
-import { ScoreboardLeague } from './ScoreboardLeague';
+import { ScoreboardChart } from './ScoreboardChart';
 import { OtherLeaguesScoreboard } from './OtherLeaguesScoreboard';
 import './Scoreboard.css';
 
@@ -21,7 +21,7 @@ export const Scoreboard = () => {
 
                 <Row>
 
-                    <ScoreboardLeague league={league} />
+                    <ScoreboardChart league={league} />
 
                     <Col lg={5} className='mt-4 mt-lg-0 d-flex flex-column-reverse flex-lg-column'>
                         <OtherLeaguesScoreboard leagues={leagues} />
