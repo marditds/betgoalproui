@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Form, Button, Modal } from 'react-bootstrap'
+import { Row, Col, Image, Form, Button, Modal } from 'react-bootstrap'
 import { Counter } from './Counter';
 import './PredictEntry.css'
 
@@ -27,7 +27,14 @@ export const PredictEntry = ({ league }) => {
         <Col>
             {!isCompleted ?
                 <>
-                    <h2>Make Your Picks for {league.name}</h2>
+                    <div className='d-flex align-items-center'>
+                        <h2>Make Your Picks for {league.name}</h2>
+                        <Image
+                            src={league.logo}
+                            style={{ maxHeight: "36px" }}
+                            className='ms-3'
+                            fluid />
+                    </div>
                     <div className="predict--entry--div">
                         <Form className='predict--entry--form'>
 

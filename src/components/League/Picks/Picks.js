@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { leagues } from '../../../data/leagues';
 import { Back } from '../../Back-Btn/Back';
 import { PredictEntry } from './PredictEntry';
@@ -35,6 +35,9 @@ export const Picks = () => {
                                     className='picks--btn'
                                 >
                                     View {league.name}'s Scoreboard
+                                    <Image src={league.logo}
+                                        style={{ maxHeight: "36px" }}
+                                        className='ms-3' fluid />
                                 </Link>
                             </Col>
                         </Row>

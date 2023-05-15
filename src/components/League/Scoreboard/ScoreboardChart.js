@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Table, Button } from 'react-bootstrap';
-import { BsFillCaretDownFill, BsChevronDown } from 'react-icons/bs';
+import { Col, Table, Button, Image } from 'react-bootstrap';
 import { FaAngleDown } from 'react-icons/fa';
 import './ScoreboardChart.css';
 
@@ -69,9 +68,17 @@ export const ScoreboardChart = ({ league }) => {
 
     return (
         <Col>
-            <h2 style={{ color: "white" }}>
-                {league?.name} Scoreboard
-            </h2>
+
+            <div className='d-flex align-items-center'>
+                <h2 style={{ color: "white" }}>
+                    {league?.name} Scoreboard
+                </h2>
+                <Image
+                    src={league.logo}
+                    style={{ maxHeight: "36px" }}
+                    className='ms-3'
+                    fluid />
+            </div>
 
             <div className='sb--table' >
                 <Table borderless>

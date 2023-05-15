@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { leagues } from '../../../data/leagues';
 import { Back } from '../../Back-Btn/Back';
 import { ScoreboardChart } from './ScoreboardChart';
@@ -33,6 +33,9 @@ export const Scoreboard = () => {
                                     className='sb--btn'
                                 >
                                     Make Your Picks for {league.name}
+                                    <Image src={league.logo}
+                                        style={{ maxHeight: "36px" }}
+                                        className='ms-3' fluid />
                                 </Link>
                                 {/* /leagues/Bundesliga/picks */}
                             </Col>
