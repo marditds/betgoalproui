@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap';
 import { leagues } from '../../data/leagues';
@@ -14,11 +14,12 @@ export const Scoreboard = () => {
 
     return (
         <Container fluid>
-            <Container className='stuff'>
+            <Container>
                 <Back />
 
                 <Row>
                     <ScoreboardLeague league={league} />
+                    {/* <ScoreboardLeague /> */}
 
                     <OtherLeaguesScoreboard leagues={leagues} />
                 </Row>

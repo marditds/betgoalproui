@@ -10,7 +10,7 @@ export const leagues = [
                 id: 1,
                 name: 'AC Milan',
                 alias: 'AC_Milan',
-                win: 0,
+                win: 2,
                 lose: 0,
                 points: 0
             },
@@ -18,7 +18,7 @@ export const leagues = [
                 id: 2,
                 name: 'Atalanta',
                 alias: 'Atalanta',
-                win: 0,
+                win: 2,
                 lose: 0,
                 points: 0
             },
@@ -26,7 +26,7 @@ export const leagues = [
                 id: 3,
                 name: 'Bologna',
                 alias: 'Bologna',
-                win: 0,
+                win: 5,
                 lose: 0,
                 points: 0
             },
@@ -34,7 +34,7 @@ export const leagues = [
                 id: 4,
                 name: 'Cremonese',
                 alias: 'Cremonese',
-                win: 0,
+                win: 4,
                 lose: 0,
                 points: 0
             },
@@ -42,7 +42,7 @@ export const leagues = [
                 id: 5,
                 name: 'Empoli',
                 alias: 'Empoli',
-                win: 0,
+                win: 1,
                 lose: 0,
                 points: 0
             },
@@ -58,7 +58,7 @@ export const leagues = [
                 id: 7,
                 name: 'Hellas Verona',
                 alias: 'Hellas_Verona',
-                win: 0,
+                win: 1,
                 lose: 0,
                 points: 0
             },
@@ -66,7 +66,7 @@ export const leagues = [
                 id: 8,
                 name: 'Inter Milan',
                 alias: 'Inter_Milan',
-                win: 0,
+                win: 1,
                 lose: 0,
                 points: 0
             },
@@ -74,7 +74,7 @@ export const leagues = [
                 id: 9,
                 name: 'Juventus',
                 alias: 'Juventus',
-                win: 0,
+                win: 2,
                 lose: 0,
                 points: 0
             },
@@ -106,7 +106,7 @@ export const leagues = [
                 id: 13,
                 name: 'Napoli',
                 alias: 'Napoli',
-                win: 0,
+                win: 2,
                 lose: 0,
                 points: 0
             },
@@ -130,7 +130,7 @@ export const leagues = [
                 id: 16,
                 name: 'Sampdoria',
                 alias: 'Sampdoria',
-                win: 0,
+                win: 3,
                 lose: 0,
                 points: 0
             },
@@ -138,7 +138,7 @@ export const leagues = [
                 id: 17,
                 name: 'Sassuolo',
                 alias: 'Sassuolo',
-                win: 0,
+                win: 1,
                 lose: 0,
                 points: 0
             },
@@ -162,7 +162,7 @@ export const leagues = [
                 id: 20,
                 name: 'Udinese',
                 alias: 'Udinese',
-                win: 0,
+                win: 2,
                 lose: 0,
                 points: 0
             }

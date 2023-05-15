@@ -9,6 +9,7 @@ import { Profile } from './components/Profile/Profile'
 import { NotFound } from './components/404/NotFound';
 import { Picks } from './components/League/Picks';
 import { Scoreboard } from './components/League/Scoreboard';
+import { ScoreboardLeague } from './components/League/ScoreboardLeague';
 import { Club } from './components/Club';
 
 function App() {

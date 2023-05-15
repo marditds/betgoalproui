@@ -1,0 +1,21 @@
+.sb--table {
+    border: 1px #282A3A solid !important;
+    border-radius: 10px !important;
+    border-collapse: initial !important;
+}
+
+.sb--table>table {
+    color: #FFFFFF !important;
+    border-color: #282A3A !important;
+}
+
+.sb--table>table>thead>tr>th,
+.sb--table>table>tbody>tr>td {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    transition: 0.3s;
+}
+
+.sb--table>table>tbody>tr:hover {
+    color: #735F32;
+}
