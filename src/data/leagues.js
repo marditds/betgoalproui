@@ -9,102 +9,162 @@ export const leagues = [
             {
                 id: 1,
                 name: 'AC Milan',
-                alias: 'AC_Milan'
+                alias: 'AC_Milan',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 2,
                 name: 'Atalanta',
-                alias: 'Atalanta'
+                alias: 'Atalanta',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 3,
                 name: 'Bologna',
-                alias: 'Bologna'
+                alias: 'Bologna',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 4,
                 name: 'Cremonese',
-                alias: 'Cremonese'
+                alias: 'Cremonese',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 5,
                 name: 'Empoli',
-                alias: 'Empoli'
+                alias: 'Empoli',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 6,
                 name: 'Fiorentina',
-                alias: 'Fiorentina'
+                alias: 'Fiorentina',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 7,
                 name: 'Hellas Verona',
-                alias: 'Hellas_Verona'
+                alias: 'Hellas_Verona',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 8,
                 name: 'Inter Milan',
-                alias: 'Inter_Milan'
+                alias: 'Inter_Milan',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 9,
                 name: 'Juventus',
-                alias: 'Juventus'
+                alias: 'Juventus',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 10,
                 name: 'Lazio',
-                alias: 'Lazio'
+                alias: 'Lazio',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 11,
                 name: 'Lecce',
-                alias: 'Lecce'
+                alias: 'Lecce',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 12,
                 name: 'Monza',
-                alias: 'Monza'
+                alias: 'Monza',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 13,
                 name: 'Napoli',
-                alias: 'Napoli'
+                alias: 'Napoli',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 14,
                 name: 'Roma',
-                alias: 'Roma'
+                alias: 'Roma',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 15,
                 name: 'Salernitana',
-                alias: 'Salernitana'
+                alias: 'Salernitana',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 16,
                 name: 'Sampdoria',
-                alias: 'Sampdoria'
+                alias: 'Sampdoria',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 17,
                 name: 'Sassuolo',
-                alias: 'Sassuolo'
+                alias: 'Sassuolo',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 18,
                 name: 'Spezia',
-                alias: 'Spezia'
+                alias: 'Spezia',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 19,
                 name: 'Torino',
-                alias: 'Torino'
+                alias: 'Torino',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 20,
                 name: 'Udinese',
-                alias: 'Udinese'
+                alias: 'Udinese',
+                win: 0,
+                lose: 0,
+                points: 0
             }
         ]
     },
@@ -117,92 +177,146 @@ export const leagues = [
             {
                 id: 1,
                 name: "B. M'gladbach",
-                alias: "B._M'gladbach"
+                alias: "B._M'gladbach",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 2,
                 name: "Bayern Munich",
-                alias: "Bayern_Munich"
+                alias: "Bayern_Munich",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 3,
                 name: "Dortmund",
-                alias: "Dortmund"
+                alias: "Dortmund",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 4,
                 name: "Eintracht Fran.",
-                alias: "Eintracht_Fran."
+                alias: "Eintracht_Fran.",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 5,
                 name: "FC Augsburg",
-                alias: "FC_Augsburg"
+                alias: "FC_Augsburg",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 6,
                 name: "FC Köln",
-                alias: "FC_Köln"
+                alias: "FC_Köln",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 7,
                 name: "FC Schalke 04",
-                alias: "FC_Schalke_04"
+                alias: "FC_Schalke_04",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 8,
                 name: "FC Union Berlin",
-                alias: "FC_Union_Berlin"
+                alias: "FC_Union_Berlin",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 9,
                 name: "FSV Mainz 05",
-                alias: "FSV_Mainz_05"
+                alias: "FSV_Mainz_05",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 10,
                 name: "Hertha Berlin",
-                alias: "Hertha_Berlin"
+                alias: "Hertha_Berlin",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 11,
                 name: "Hoffenheim",
-                alias: "Hoffenheim"
+                alias: "Hoffenheim",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 12,
                 name: "Leverkusen",
-                alias: "Leverkusen"
+                alias: "Leverkusen",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 13,
                 name: "RB Leipzig",
-                alias: "RB_Leipzig"
+                alias: "RB_Leipzig",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 14,
                 name: "SC Freiburg",
-                alias: "SC_Freiburg"
+                alias: "SC_Freiburg",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 15,
                 name: "VfB Stuttgart",
-                alias: "VfB_Stuttgart"
+                alias: "VfB_Stuttgart",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 16,
                 name: "VfL Bochum",
-                alias: "VfL_Bochum"
+                alias: "VfL_Bochum",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 17,
                 name: "VfL Wolfsburg",
-                alias: "VfL_Wolfsburg"
+                alias: "VfL_Wolfsburg",
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 18,
                 name: "Werder Bremen",
-                alias: "Werder_Bremen"
+                alias: "Werder_Bremen",
+                win: 0,
+                lose: 0,
+                points: 0
             }
 
         ]
@@ -215,101 +329,161 @@ export const leagues = [
         clubs: [{
             id: 1,
             name: 'Arsenal',
-            alias: 'Arsenal'
+            alias: 'Arsenal',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 2,
             name: 'Aston Villa FC',
-            alias: 'Aston_Villa_FC'
+            alias: 'Aston_Villa_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 3,
             name: 'Bournemouth AFC',
-            alias: 'Bournemouth_AFC'
+            alias: 'Bournemouth_AFC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 4,
             name: 'Brentford',
-            alias: 'Brentford'
+            alias: 'Brentford',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 5,
             name: 'Brighton & Hove Albion',
-            alias: 'Brighton_&_Hove_Albion'
+            alias: 'Brighton_&_Hove_Albion',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 6,
             name: 'Chelsea',
-            alias: 'Chelsea'
+            alias: 'Chelsea',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 7,
             name: 'Crystal Palace',
-            alias: 'Crystal_Palace'
+            alias: 'Crystal_Palace',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 8,
             name: 'Everton FC',
-            alias: 'Everton_FC'
+            alias: 'Everton_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 9,
             name: 'Fulham',
-            alias: 'Fulham'
+            alias: 'Fulham',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 10,
             name: 'Leicester City FC',
-            alias: 'Leicester_City_FC'
+            alias: 'Leicester_City_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 11,
             name: 'Leeds United',
-            alias: 'Leeds_United'
+            alias: 'Leeds_United',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 12,
             name: 'Liverpool FC',
-            alias: 'Liverpool_FC'
+            alias: 'Liverpool_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 13,
             name: 'Manchester City FC',
-            alias: 'Manchester_City_FC'
+            alias: 'Manchester_City_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 14,
             name: 'Manchester United FC',
-            alias: 'Manchester_United_FC'
+            alias: 'Manchester_United_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 15,
             name: 'Newcastle United',
-            alias: 'Newcastle_United'
+            alias: 'Newcastle_United',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 16,
             name: 'Nottingham Forest',
-            alias: 'Nottingham_Forest'
+            alias: 'Nottingham_Forest',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 17,
             name: 'Southampton FC',
-            alias: 'Southampton_FC'
+            alias: 'Southampton_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 18, name: 'Tottenham Hotspur FC',
-            alias: 'Tottenham_Hotspur_FC'
+            alias: 'Tottenham_Hotspur_FC',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 19,
             name: 'West Ham United',
-            alias: 'West_Ham_United'
+            alias: 'West_Ham_United',
+            win: 0,
+            lose: 0,
+            points: 0
         },
         {
             id: 20,
             name: 'Wolverhampton Wanderers',
-            alias: 'Wolverhampton_Wanderers'
+            alias: 'Wolverhampton_Wanderers',
+            win: 0,
+            lose: 0,
+            points: 0
         }]
     },
     {
@@ -321,102 +495,162 @@ export const leagues = [
             {
                 id: 1,
                 name: 'Almería',
-                alias: 'Almería'
+                alias: 'Almería',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 2,
                 name: 'Athletic',
-                alias: 'Athletic'
+                alias: 'Athletic',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 3,
                 name: 'Atlético Madrid',
-                alias: 'Atlético_Madrid'
+                alias: 'Atlético_Madrid',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 4,
                 name: 'Barcelona',
-                alias: 'Barcelona'
+                alias: 'Barcelona',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 5,
                 name: 'Betis',
-                alias: 'Betis'
+                alias: 'Betis',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 6,
                 name: 'Cádiz',
-                alias: 'Cádiz'
+                alias: 'Cádiz',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 7,
                 name: 'Celta Vigo',
-                alias: 'Celta_Vigo'
+                alias: 'Celta_Vigo',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 8,
                 name: 'Elche',
-                alias: 'Elche'
+                alias: 'Elche',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 9,
                 name: 'Espanyol',
-                alias: 'Espanyol'
+                alias: 'Espanyol',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 10,
                 name: 'Getafe',
-                alias: 'Getafe'
+                alias: 'Getafe',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 11,
                 name: 'Girona',
-                alias: 'Girona'
+                alias: 'Girona',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 12,
                 name: 'Mallorca',
-                alias: 'Mallorca'
+                alias: 'Mallorca',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 13,
                 name: 'Osasuna',
-                alias: 'Osasuna'
+                alias: 'Osasuna',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 14,
                 name: 'Rayo Vallecano',
-                alias: 'Rayo_Vallecano'
+                alias: 'Rayo_Vallecano',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 15,
                 name: 'Real Madrid',
-                alias: 'Real_Madrid'
+                alias: 'Real_Madrid',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 16,
                 name: 'Real Sociedad',
-                alias: 'Real_Sociedad'
+                alias: 'Real_Sociedad',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 17,
                 name: 'Sevilla',
-                alias: 'Sevilla'
+                alias: 'Sevilla',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 18,
                 name: 'Valencia',
-                alias: 'Valencia'
+                alias: 'Valencia',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 19,
                 name: 'Valladolid',
-                alias: 'Valladolid'
+                alias: 'Valladolid',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 20,
                 name: 'Villarreal',
-                alias: 'Villarreal'
+                alias: 'Villarreal',
+                win: 0,
+                lose: 0,
+                points: 0
             }
         ]
     },
@@ -429,102 +663,162 @@ export const leagues = [
             {
                 id: 1,
                 name: 'Ac Ajaccio',
-                alias: 'Ac_Ajaccio'
+                alias: 'Ac_Ajaccio',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 2,
                 name: 'Aj Auxerre',
-                alias: 'Aj_Auxerre'
+                alias: 'Aj_Auxerre',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 3,
                 name: 'Angers Sco',
-                alias: 'Angers_Sco'
+                alias: 'Angers_Sco',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 4,
                 name: 'As Monaco',
-                alias: 'As_Monaco'
+                alias: 'As_Monaco',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 5,
                 name: 'Clermont Foot 63',
-                alias: 'Clermont_Foot_63'
+                alias: 'Clermont_Foot_63',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 6,
                 name: 'Estac Troyes',
-                alias: 'Estac_Troyes'
+                alias: 'Estac_Troyes',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 7,
                 name: 'Fc Lorient',
-                alias: 'Fc_Lorient'
+                alias: 'Fc_Lorient',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 8,
                 name: 'Fc Nantes',
-                alias: 'Fc_Nantes'
+                alias: 'Fc_Nantes',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 9,
                 name: 'Losc Lille',
-                alias: 'Losc_Lille'
+                alias: 'Losc_Lille',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 10,
                 name: 'Montpellier Hérault Sc',
-                alias: 'Montpellier_Hérault_Sc'
+                alias: 'Montpellier_Hérault_Sc',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 11,
                 name: 'Ogc Nice',
-                alias: 'Ogc_Nice'
+                alias: 'Ogc_Nice',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 12,
                 name: 'Olympique De Marseille',
-                alias: 'Olympique_De_Marseille'
+                alias: 'Olympique_De_Marseille',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 13,
                 name: 'Olympique Lyonnais',
-                alias: 'Olympique_Lyonnais'
+                alias: 'Olympique_Lyonnais',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 14,
                 name: 'Paris Saint-Germain',
-                alias: 'Paris_Saint-Germain'
+                alias: 'Paris_Saint-Germain',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 15,
                 name: 'Rc Lens',
-                alias: 'Rc_Lens'
+                alias: 'Rc_Lens',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 16,
                 name: 'Rc Strasbourg Alsace',
-                alias: 'Rc_Strasbourg_Alsace'
+                alias: 'Rc_Strasbourg_Alsace',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 17,
                 name: 'Stade Brestois 29',
-                alias: 'Stade_Brestois_29'
+                alias: 'Stade_Brestois_29',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 18,
                 name: 'Stade De Reims',
-                alias: 'Stade_De_Reims'
+                alias: 'Stade_De_Reims',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 19,
                 name: 'Stade Rennais Fc',
-                alias: 'Stade_Rennais_Fc'
+                alias: 'Stade_Rennais_Fc',
+                win: 0,
+                lose: 0,
+                points: 0
             },
             {
                 id: 20,
                 name: 'Toulouse Fc',
-                alias: 'Toulouse_Fc'
+                alias: 'Toulouse_Fc',
+                win: 0,
+                lose: 0,
+                points: 0
             }
         ]
     }
