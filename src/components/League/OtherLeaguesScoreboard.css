@@ -1,0 +1,37 @@
+.sb--other--leagues--h4 {
+    line-height: 38.39px;
+}
+
+.sb--other--leagues--div {
+    border: 1px #282A3A solid;
+    border-radius: 10px;
+    padding: 0 !important;
+    transition: 0.3s;
+}
+
+.sb--other--leagues--link--div {
+    border-bottom: 1px solid #282A3A !important;
+    transition: 0.3s;
+}
+
+
+.sb--other--leagues--link--div:last-child {
+    border-bottom: 0px !important;
+}
+
+.sb--other--leagues--link {
+    padding-left: 20px;
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.sb--other--leagues--link:hover {
+    color: #C69749;
+}
+
+.other--leagues--link:active {
+    color: #735F32;
+}

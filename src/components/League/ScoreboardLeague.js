@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Stack, Col, Table, Button } from 'react-bootstrap';
+import { Col, Table, Button } from 'react-bootstrap';
 import './ScoreboardLeague.css';
 
 
@@ -8,7 +8,6 @@ import './ScoreboardLeague.css';
 
 // export const ScoreboardLeague = ({ league }) => {
 export const ScoreboardLeague = ({ league }) => {
-
 
     // let { leagueAlias } = useParams();
 
@@ -19,6 +18,7 @@ export const ScoreboardLeague = ({ league }) => {
 
     // console.log('THIS IS CLUBS:', clubs);
 
+    // SORT ABC
     const sortABC = (param) => {
         let temp = [...param].sort((a, b) => {
             return a.name.localeCompare(b.name);
@@ -27,6 +27,7 @@ export const ScoreboardLeague = ({ league }) => {
         console.log(temp);
     };
 
+    // SORT WINS
     const sortWins = (param) => {
         let temp = [...param].sort((a, b) => {
             return (
@@ -37,6 +38,7 @@ export const ScoreboardLeague = ({ league }) => {
         console.log(temp);
     }
 
+    // SORT LOSS
     const sortLoss = (param) => {
         let temp = [...param].sort((a, b) => {
             return (
@@ -47,6 +49,7 @@ export const ScoreboardLeague = ({ league }) => {
         console.log(temp);
     }
 
+    // SORE POINTS
     const sortPoints = (param) => {
         let temp = [...param].sort((a, b) => {
             return (

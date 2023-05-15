@@ -1,4 +1,4 @@
-.picks--btn {
+.sb--btn {
     color: #C69749 !important;
     text-decoration: none !important;
     padding: 10px 20px 10px 20px;
@@ -7,7 +7,7 @@
     transition: 0.3s;
 }
 
-.picks--btn:hover {
+.sb--btn:hover {
     color: #735F32 !important;
     border-color: #735F32;
 }
