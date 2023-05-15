@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Table, Button } from 'react-bootstrap';
-import { BsFillCaretDownFill } from 'react-icons/bs';
+import { BsFillCaretDownFill, BsChevronDown } from 'react-icons/bs';
+import { FaAngleDown } from 'react-icons/fa';
 import './ScoreboardChart.css';
 
 
@@ -83,7 +84,9 @@ export const ScoreboardChart = ({ league }) => {
                                     className='abc--btn'
                                 >
                                     Club
-                                    <BsFillCaretDownFill className='ms-2' />
+                                    {/* <BsFillCaretDownFill className='ms-2' /> */}
+                                    {/* <BsChevronDown className='ms-2' /> */}
+                                    <FaAngleDown className='ms-1' />
                                 </Button>
                             </th>
                             <th>
@@ -92,7 +95,9 @@ export const ScoreboardChart = ({ league }) => {
                                     className='win--btn'
                                 >
                                     W
-                                    <BsFillCaretDownFill className='ms-2' />
+                                    {/* <BsFillCaretDownFill className='ms-2' /> */}
+                                    {/* <BsChevronDown className='ms-2' /> */}
+                                    <FaAngleDown className='ms-1' />
                                 </Button>
                             </th>
                             <th>
@@ -101,7 +106,9 @@ export const ScoreboardChart = ({ league }) => {
                                     className='lose--btn'
                                 >
                                     L
-                                    <BsFillCaretDownFill className='ms-2' />
+                                    {/* <BsFillCaretDownFill className='ms-2' /> */}
+                                    {/* <BsChevronDown className='ms-2' /> */}
+                                    <FaAngleDown className='ms-1' />
                                 </Button>
                             </th>
                             <th>
@@ -110,7 +117,9 @@ export const ScoreboardChart = ({ league }) => {
                                     className='pts--btn'
                                 >
                                     P
-                                    <BsFillCaretDownFill className='ms-2' />
+                                    {/* <BsFillCaretDownFill className='ms-2' /> */}
+                                    {/* <BsChevronDown className='ms-2' /> */}
+                                    <FaAngleDown className='ms-1' />
                                 </Button>
                             </th>
                         </tr>

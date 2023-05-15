@@ -53,6 +53,7 @@ tr td:not(:first-child):not(:nth-child(2)) {
     border: 0px !important;
     padding: 0 !important;
     font-weight: bolder !important;
+    transition: 0.3s;
 }
 
 .abc--btn:hover,
