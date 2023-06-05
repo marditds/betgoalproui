@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { leagues } from '../../../data/leagues';
@@ -9,11 +9,19 @@ import { OtherLeaguesPicks } from './OtherLeaguesPicks';
 import './Picks.css';
 
 
-export const Picks = () => {
+export const Picks = ({ pairingData }) => {
 
     let { leagueAlias } = useParams();
+    const navigate = useNavigate();
 
     const league = leagues.find((league) => league.alias === leagueAlias)
+
+    useEffect(() => {
+        if (!pairingData || !pairingData.accountIds) {
+            navigate('/');
+        }
+    }, [pairingData, navigate]
+    )
 
     return (
         <Container fluid>

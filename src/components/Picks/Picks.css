@@ -1,0 +1,16 @@
+.picks--btn {
+    color: #C69749 !important;
+    text-decoration: none !important;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #282A3A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.picks--btn:hover {
+    color: #735F32 !important;
+    border-color: #735F32;
+}

@@ -1,0 +1,16 @@
+/* .cnnct--body { */
+.cnnct--body {
+    height: 100vh;
+}
+
+.cnnct--btn {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background-color: black !important;
+    border-color: #735F32 !important;
+    transition: 0.3s;
+}
+
+.cnnct--btn:hover {
+    background-color: #282A3A !important;
+}

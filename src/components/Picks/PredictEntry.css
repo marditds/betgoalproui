@@ -1,0 +1,70 @@
+ .predict--entry--form {
+     border: 1px #282A3A solid;
+     border-radius: 10px;
+ }
+
+ .predict--entry--form>.myFG {
+     border-bottom: 1px solid #282A3A !important;
+ }
+
+ .predict--entry--form>.myFG:nth-last-child(2) {
+     border-bottom: 0px !important;
+ }
+
+ .picks--btn--rst {
+     background-color: transparent !important;
+     color: #FFFFFF !important;
+     border-color: #735F32 !important;
+ }
+
+ .picks--btn--rst:hover {
+     background-color: #282A3A !important;
+     color: #FFFFFF !important;
+     border-color: #735F32 !important;
+ }
+
+ .picks--btn--smbt {
+     background-color: #735F32 !important;
+     border-color: #735F32 !important;
+     color: #000000 !important;
+ }
+
+ .picks--btn--smbt:hover {
+     border-color: #C69749 !important;
+     color: #FFFFFF !important;
+ }
+
+ .modal--content>div>div {
+     background-color: transparent !important;
+ }
+
+ .modal--header {
+     color: #FFFFFF;
+     background-color: #282A3A;
+ }
+
+ .modal--body {
+     background-color: #282A3A;
+     color: #FFFFFF;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+ .modal--body>div>button {
+     background-color: #735F32 !important;
+     border-color: #000000 !important;
+     transition: 0.3s;
+ }
+
+ .modal--body>div>button:hover {
+     color: #000000 !important;
+     border-color: #C69749 !important;
+ }
+
+ @media (max-width: 575px) {
+
+     .picks--btn--rst,
+     .picks--btn--smbt {
+         width: 100%;
+     }
+ }

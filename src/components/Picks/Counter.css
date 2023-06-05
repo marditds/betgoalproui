@@ -1,0 +1,38 @@
+.counter--body {
+    width: 40px !important;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+}
+
+.counter--btn {
+    background-color: #282A3A !important;
+    border-color: #735F32 !important;
+    transition: 0.3s !important;
+    height: 38px;
+    width: 38px;
+}
+
+.counter--btn:hover {
+    border-color: #C69749 !important;
+}
+
+
+.counter--btn:active {
+    background-color: #735F32 !important;
+    /* border-color: #282A3A !important; */
+}
+
+@media (max-width: 575px) {
+    .counter--btn {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    /* .counter--body {
+        margin: 115px 5px 5px 5px !important;
+    } */
+}

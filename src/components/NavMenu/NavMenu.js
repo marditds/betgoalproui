@@ -15,7 +15,10 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                 <Container>
                     <Navbar.Brand href="/" className='navbar--logo'>TOTO HBAR</Navbar.Brand>
                     <Nav>
-                        {!pairingData ?
+                        <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
+                            Profile
+                        </Nav.Link>
+                        {/* {!pairingData ?
                             <Nav.Link
                                 onClick={connectWallet}
                                 className='navbar--navlink' >
@@ -24,21 +27,10 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                             : <>
                                 <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                                     Profile
-                                </Nav.Link>
-                                {/* <NavDropdown title={pairingData.accountIds}  >
-                                    <NavDropdown.Item href="/me"
-                                        className=' text-lg-start text-end'
-                                    >
-                                        Profile
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item onClick={() => disconnectPairing(pairingData)}
-                                        className=' text-lg-start text-end '
-                                    >
-                                        Disconnect
-                                    </NavDropdown.Item>
-                                </NavDropdown> */}
+                                </Nav.Link> 
                             </>
-                        }
+                        }  */}
+
 
                     </Nav>
 

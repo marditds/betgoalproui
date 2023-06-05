@@ -56,6 +56,8 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
     }, [pairingData, navigate]
     )
 
+    console.log('ACCOUNT IDDDDDDD: ', pairingData?.accountIds);
+
     return (
         <Container fluid>
             <Container style={{ color: "white" }}>
@@ -68,7 +70,7 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
                     <Col className='d-flex flex-column text-md-start text-center'>
                         <Col><h4>{userData.username}</h4></Col>
                         <Col>Account Balance: {balance} HBAR</Col>
-                        <Col>Wallet ID: {pairingData.accountIds}</Col>
+                        <Col>Wallet ID: {pairingData?.accountIds}</Col>
                         <Col>{trackRecord}Winnign Streak</Col>
                     </Col>
                 </Row>

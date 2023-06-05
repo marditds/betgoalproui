@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import { leagues } from '../../../data/leagues';
-import { Back } from '../../Back-Btn/Back';
-import { ScoreboardChart } from './ScoreboardChart';
-import { OtherLeaguesScoreboard } from './OtherLeaguesScoreboard';
-import './Scoreboard.css';
+// import { leagues } from '../../data/leagues';
+import { special } from '../../data/special';
+import { Back } from '../Back-Btn/Back';
+import { PredictEntry } from './PredictEntry';
+import './Picks.css';
 
-export const Scoreboard = ({ pairingData }) => {
 
-    let { leagueAlias } = useParams();
+export const Picks = ({ pairingData }) => {
+
+    // let { leagueAlias } = useParams();
     const navigate = useNavigate();
 
-    const league = leagues.find((league) => league.alias === leagueAlias);
+    // const league = leagues.find((league) => league.alias === leagueAlias)
 
     useEffect(() => {
         if (!pairingData || !pairingData.accountIds) {
@@ -24,32 +25,32 @@ export const Scoreboard = ({ pairingData }) => {
 
     return (
         <Container fluid>
-            <Container>
-                <Back />
+            <Container className='stuff'>
+                {/* <Back /> */}
 
                 <Row>
 
-                    <ScoreboardChart league={league} />
+                    <PredictEntry league={special} />
 
                     <Col lg={5} className='mt-4 mt-lg-0 d-flex flex-column-reverse flex-lg-column'>
-                        <OtherLeaguesScoreboard leagues={leagues} />
 
-                        <Row>
+                        {/* <OtherLeaguesPicks leagues={leagues} /> */}
+
+                        {/* <Row>
                             <Col className='mt-0 mt-lg-3 mb-3'>
                                 <Link
-                                    to={`/leagues/${league.alias}/picks`}
-                                    className='sb--btn'
+                                    to={`/leagues/${league.alias}/scoreboard`}
+                                    className='picks--btn'
                                 >
-                                    Make Your Picks for {league.name}
+                                    View {league.name}'s Scoreboard
                                     <Image src={league.logo}
                                         style={{ maxHeight: "36px" }}
                                         className='ms-3' fluid />
                                 </Link>
-                                {/* /leagues/Bundesliga/picks */}
                             </Col>
-                        </Row>
+                        </Row> */}
+                        {/* leagues/Bundesliga/scoreboard */}
                     </Col>
-
                 </Row>
             </Container>
         </Container>
