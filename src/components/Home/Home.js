@@ -5,7 +5,7 @@ import "./Home.css"
 
 export const Home = () => {
     return (
-        <>
+        <div className='home--body'>
             {/* <Row className='d-flex flex-column'> */}
             {/* <Row > */}
             {/* <Col > */}
@@ -18,6 +18,6 @@ export const Home = () => {
 
 
             {/* </Row> */}
-        </>
+        </div>
     )
 }

@@ -26,7 +26,7 @@ export const Picks = ({ pairingData }) => {
     return (
         <Container fluid>
             <Container className='stuff'>
-                {/* <Back /> */}
+                <Back />
 
                 <Row>
 

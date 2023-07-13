@@ -69,17 +69,17 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  // const handleChange = (e) => {
-  //   setTotoId(preVal => e.target.value);
-  // }
+  const handleChange = (e) => {
+    setTotoId(preVal => e.target.value);
+  }
 
-  // const handleSubmit = () => {
-  //   if (totoId === '123') {
-  //     setChk(preVal => true);
-  //   } else {
-  //     setChk(preVal => false);
-  //   }
-  // }
+  const handleSubmit = () => {
+    if (totoId === '123') {
+      setChk(preVal => true);
+    } else {
+      setChk(preVal => false);
+    }
+  }
 
 
   console.log('THIS IS HOME DATA: ', pairingData);
@@ -93,7 +93,8 @@ function App() {
 
       <Routes>
         {/* <Route path='/' element={chk ? <Home /> : <AuthCheck totoId={totoId} handleChange={handleChange} handleSubmit={handleSubmit} />} /> */}
-        <Route path='/' element={pairingData ? <Picks pairingData={pairingData} /> : <ConnectWallet connectWallet={connectWallet} />} />
+        {/* <Route path='/' element={pairingData ? <Picks pairingData={pairingData} /> : <ConnectWallet connectWallet={connectWallet} />} /> */}
+        <Route path='/' element={pairingData ? <Home /> : <ConnectWallet connectWallet={connectWallet} />} />
 
 
 
@@ -103,7 +104,7 @@ function App() {
 
         <Route path='/leagues/:leagueAlias'>
           <Route path=':clubAlias' element={<Club pairingData={pairingData} />} />
-          {/* <Route path='picks' element={<Picks pairingData={pairingData} />} /> */}
+          <Route path='picks' element={<Picks pairingData={pairingData} />} />
           <Route path='scoreboard' element={<Scoreboard pairingData={pairingData} />} />
         </Route>
 

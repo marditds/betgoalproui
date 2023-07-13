@@ -2,6 +2,8 @@
 .cnnct--body {
     height: 100vh;
     position: relative !important;
+    flex-grow: 1;
+    margin-top: -40 !important;
 }
 
 .cnnct--btn {
