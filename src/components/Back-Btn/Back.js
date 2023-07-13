@@ -14,7 +14,7 @@ export const Back = () => {
 
     return (
         <Row>
-            <Col>
+            <Col className='px-0'>
                 <Button onClick={handleBack} className='back--btn'>
                     <IoIosArrowBack />
                     Back

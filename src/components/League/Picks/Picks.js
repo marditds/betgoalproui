@@ -25,7 +25,7 @@ export const Picks = ({ pairingData }) => {
 
     return (
         <Container fluid>
-            <Container className='stuff'>
+            <Container className='stuff picks--body'>
                 <Back />
 
                 <Row>

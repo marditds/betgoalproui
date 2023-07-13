@@ -4,6 +4,7 @@
     background-attachment: fixed !important;
     background-size: contain !important;
     position: relative;
+    margin-top: 40px;
 }
 
 .league--body::before {

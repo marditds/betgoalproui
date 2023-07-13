@@ -24,7 +24,7 @@ export const Scoreboard = ({ pairingData }) => {
 
     return (
         <Container fluid>
-            <Container>
+            <Container className='scoreboard--body'>
                 <Back />
 
                 <Row>
