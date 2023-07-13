@@ -9,10 +9,10 @@ import { Home } from './components/Home/Home'
 import { League } from './components/League/League'
 import { Profile } from './components/Profile/Profile'
 import { NotFound } from './components/404/NotFound';
-// import { Picks } from './components/League/Picks/Picks';
+import { Picks } from './components/League/Picks/Picks';
 import { Scoreboard } from './components/League/Scoreboard/Scoreboard';
 import { Club } from './components/Club';
-import { Picks } from './components/Picks/Picks';
+// import { Picks } from './components/Picks/Picks';
 
 function App() {
 

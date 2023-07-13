@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-// import { leagues } from '../../data/leagues';
+import { leagues } from '../../data/leagues';
 import { special } from '../../data/special';
 import { Back } from '../Back-Btn/Back';
 import { PredictEntry } from './PredictEntry';
 import './Picks.css';
+// import { OtherLeaguesPicks } from './OtherLeaguesPiks.js';
 
 
 export const Picks = ({ pairingData }) => {
