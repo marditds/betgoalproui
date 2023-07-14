@@ -13,9 +13,11 @@ export const CurrentMatches = () => {
                         <Col className='d-flex justify-content-center current--match--child--col'
                             style={{ background: `url(${leagues[2].logo})` }}
                         >
+
                             <h5>Brentford</h5>
                             <h2>VS</h2>
                             <h5>Crystal Palace</h5>
+
                         </Col>
                     </Link>
                 </Col>

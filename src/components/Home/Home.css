@@ -54,9 +54,9 @@
     background-size: calc(50%) !important;
     background-position: center top !important;
     background-color: #282a3a !important;
-    transition: 0.3s;
     padding: 110px;
     position: relative;
+    transition: 0.3s;
 }
 
 .current--match--child--col:hover {
@@ -64,24 +64,24 @@
     background-position: center bottom !important;
 }
 
-.current--match--child--col>h5 {
+.current--match--child--col h5 {
     filter: opacity(1) !important;
     margin: 0;
     color: #FFFFFF;
     transition: 0.3s;
 }
 
-.current--match--child--col:hover>h5 {
+.current--match--child--col:hover h5 {
     color: #C69749;
 }
 
-.current--match--child--col>h2 {
+.current--match--child--col h2 {
     color: #C69749;
     margin: 0;
     transition: 0.3s;
 }
 
-.current--match--child--col:hover>h2 {
+.current--match--child--col:hover h2 {
     color: #FFFFFF;
 }
 
