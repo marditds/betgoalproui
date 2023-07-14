@@ -215,13 +215,13 @@
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    .current--match--col {
+    .current--match--child--col {
         padding: 80px;
     }
 }
 
 @media (max-width: 991px) {
-    .current--match--col {
+    .current--match--child--col {
         padding: 60px;
     }
 
@@ -232,7 +232,7 @@
 
 
 @media (max-width: 767px) {
-    .current--match--col {
+    .current--match--child--col {
         padding: 30px;
     }
 
@@ -242,7 +242,7 @@
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
-    .current--match--col>h5 {
+    .current--match--child--col>h5 {
         font-size: 12pt;
     }
 
@@ -250,7 +250,7 @@
 
 @media (max-width: 575px) {
 
-    .current--match--col {
+    .current--match--child--col {
         padding: 60px;
     }
 
