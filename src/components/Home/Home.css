@@ -39,7 +39,7 @@
 
 .current--match--child--col:hover::before {
     content: "";
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
     right: 0;
