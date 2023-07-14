@@ -60,7 +60,7 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
 
     return (
         <Container fluid>
-            <Container style={{ color: "white" }}>
+            <Container style={{ color: "white" }} className='profile--body'>
                 <Back />
                 <h3>Profile</h3>
                 <Row>

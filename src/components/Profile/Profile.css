@@ -1,5 +1,5 @@
-body {
-    /* background-color: azure !important; */
+.profile--body {
+    margin-top: 40px;
 }
 
 .profile--upload--btn {
