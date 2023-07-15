@@ -15,15 +15,15 @@ export const Scoreboard = ({ pairingData }) => {
 
     const league = leagues.find((league) => league.alias === leagueAlias);
 
-    useEffect(() => {
-        if (!pairingData || !pairingData.accountIds) {
-            navigate('/');
-        }
+    // useEffect(() => {
+    //     if (!pairingData || !pairingData.accountIds) {
+    //         navigate('/');
+    //     }
 
-        document.title = `BetGoalPro | ${league.name} | Scoreboard`;
+    //     document.title = `BetGoalPro | ${league.name} | Scoreboard`;
 
-    }, [pairingData, navigate]
-    )
+    // }, [pairingData, navigate]
+    // )
 
     return (
         <Container fluid>

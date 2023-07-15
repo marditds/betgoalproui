@@ -9,22 +9,22 @@ import { OtherLeaguesPicks } from './OtherLeaguesPicks';
 import './Picks.css';
 
 
-export const Picks = ({ pairingData }) => {
+export const Picks = ({ pairingData, connectWallet }) => {
 
     let { leagueAlias } = useParams();
     const navigate = useNavigate();
 
     const league = leagues.find((league) => league.alias === leagueAlias)
 
-    useEffect(() => {
-        if (!pairingData || !pairingData.accountIds) {
-            navigate('/');
-        }
+    // useEffect(() => {
+    //     if (!pairingData || !pairingData.accountIds) {
+    //         navigate('/');
+    //     }
 
-        document.title = `BetGoalPro | ${league.name} | Picks`;
+    //     document.title = `BetGoalPro | ${league.name} | Picks`;
 
-    }, [pairingData, navigate]
-    )
+    // }, [pairingData, navigate]
+    // )
 
     return (
         <Container fluid>
@@ -33,7 +33,7 @@ export const Picks = ({ pairingData }) => {
 
                 <Row>
 
-                    <PredictEntry league={league} />
+                    <PredictEntry league={league} pairingData={pairingData} connectWallet={connectWallet} />
 
                     <Col lg={5} className='mt-4 mt-lg-0 d-flex flex-column-reverse flex-lg-column'>
 

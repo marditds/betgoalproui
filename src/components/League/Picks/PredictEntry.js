@@ -5,14 +5,15 @@ import './PredictEntry.css'
 
 
 
-export const PredictEntry = ({ league }) => {
+export const PredictEntry = ({ league, pairingData, connectWallet }) => {
 
     const [isCompleted, setIsCompleted] = useState(false);
     const [show, setShow] = useState(true);
     const [value, setValue] = useState(0);
     const [resetKey, setResetKey] = useState(0);
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setIsCompleted((preVal) => true);
     }
 
@@ -223,9 +224,21 @@ export const PredictEntry = ({ league }) => {
                                 <Button className="picks--btn--rst me-3 ms-3 ms-sm-0" onClick={handleReset}>
                                     Reset
                                 </Button>
-                                <Button type="submit" className="picks--btn--smbt" onClick={handleSubmit}>
+                                {/* {!pairingData ?
+                                    <Button type="button" className="picks--btn--smbt"
+                                        onClick={connectWallet
+                                        }>
+                                        Connect Wallet to Submit
+                                    </Button>
+                                    : */}
+                                <Button
+                                    type={!pairingData ? "button" : "submit"}
+                                    className="picks--btn--smbt"
+                                    onClick={!pairingData ? connectWallet : handleSubmit}>
                                     Submit
                                 </Button>
+                                {/* } */}
+
                             </div>
                         </Form>
                     </div>

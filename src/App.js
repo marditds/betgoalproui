@@ -24,7 +24,7 @@ function App() {
 
   const handleGuestLogin = (event) => {
     event.preventDefault();
-    setGuestData({ ...guestData, guestName: guestName });
+    setGuestData({ ...guestData, guestName });
   }
 
   const updateGuestName = (name) => {
@@ -110,15 +110,21 @@ function App() {
   return (
     <div className="App">
 
-      {pairingData ? <NavMenu pairingData={pairingData} connectWallet={connectWallet}
-      // disconnectPairing={disconnectPairing} 
-      /> : null}
+      {
+        (pairingData || guestData.guestName)
+          ?
+          <NavMenu pairingData={pairingData} connectWallet={connectWallet}
+          // disconnectPairing={disconnectPairing} 
+          />
+          : null}
 
 
 
       <Routes>
         {/* <Route path='/' element={chk ? <Home /> : <AuthCheck totoId={totoId} handleChange={handleChange} handleSubmit={handleSubmit} />} /> */}
         {/* <Route path='/' element={pairingData ? <Picks pairingData={pairingData} /> : <ConnectWallet connectWallet={connectWallet} />} /> */}
+
+        {/* HOME START */}
         <Route path='/'
           element={
             (pairingData || guestData.guestName) ?
@@ -128,6 +134,8 @@ function App() {
                 <GuestLogin guestName={guestData.guestName} handleGuestLogin={handleGuestLogin} updateGuestName={updateGuestName} />
                 <ConnectWallet connectWallet={connectWallet} />
               </>} />
+        {/* HOME END */}
+
 
 
 
@@ -137,14 +145,14 @@ function App() {
 
         <Route path='/leagues/:leagueAlias'>
           <Route path=':clubAlias' element={<Club pairingData={pairingData} />} />
-          <Route path='picks' element={<Picks pairingData={pairingData} />} />
+          <Route path='picks' element={<Picks pairingData={pairingData} connectWallet={connectWallet} />} />
           <Route path='scoreboard' element={<Scoreboard pairingData={pairingData} />} />
         </Route>
 
 
         {/* REDIRECT */}
         {/* {pairingData &&  */}
-        <Route path='me' element={<Profile pairingData={pairingData} disconnectPairing={disconnectPairing} />} />
+        <Route path='me' element={<Profile pairingData={pairingData} disconnectPairing={disconnectPairing} guestData={guestData} />} />
         {/* } */}
 
         <Route path='*' element={<NotFound />} />

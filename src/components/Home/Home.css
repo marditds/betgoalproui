@@ -57,6 +57,7 @@
     padding: 110px;
     position: relative;
     transition: 0.3s;
+    height: 100% !important;
 }
 
 .current--match--child--col:hover {

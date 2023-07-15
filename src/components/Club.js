@@ -15,12 +15,12 @@ export const Club = ({ pairingData }) => {
 
     console.log("THIS IS CLUB: ", club);
 
-    useEffect(() => {
-        if (!pairingData || !pairingData.accountIds) {
-            navigate('/');
-        }
-    }, [pairingData, navigate]
-    )
+    // useEffect(() => {
+    //     if (!pairingData || !pairingData.accountIds) {
+    //         navigate('/');
+    //     }
+    // }, [pairingData, navigate]
+    // )
 
     return (
         <div>Hello {club.name}</div>

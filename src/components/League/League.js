@@ -17,16 +17,18 @@ export const League = ({ pairingData }) => {
 
     console.log(league.clubs);
 
-    useEffect(() => {
-        if (!pairingData || !pairingData.accountIds) {
-            navigate('/');
-        }
+    // useEffect(() => {
+    //     if (!pairingData || !pairingData.accountIds) {
+    //         navigate('/');
+    //     }
 
-        document.title = `BetGoalPro | ${league.name}`;
+    //     document.title = `BetGoalPro | ${league.name}`;
 
 
-    }, [pairingData, navigate]
-    )
+    // }, [pairingData, navigate]
+    // )
+
+    // console.log('league pairing: ' + pairingData);
 
     return (
         <Container fluid className='league--body'
@@ -43,7 +45,7 @@ export const League = ({ pairingData }) => {
                     </Row>
                 </Link>
 
-
+                {/* <span className='d-none'>this is pairing data: {pairingData?.accountIds}</span> */}
                 <Link to={`./scoreboard`} className='league--a'>
                     <Row className='league--row'>
                         <Col className='d-flex justify-content-center align-items-center league--col'>

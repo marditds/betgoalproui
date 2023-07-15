@@ -9,8 +9,21 @@
 
 .navbar--navlink {
     color: white !important;
+    transition: 0s !important;
 }
 
 .navbar--navlink:hover {
     color: #735F32 !important;
+}
+
+.cnnct--wllt {
+    border: 1px solid #FFFFFF;
+    border-width: thin;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.cnnct--wllt:hover {
+    border-color: #735F32 !important;
+    transition: 0.3s;
 }

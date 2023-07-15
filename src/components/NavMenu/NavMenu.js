@@ -15,21 +15,21 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                 <Container>
                     <Navbar.Brand href="/" className='navbar--logo'>BetGoalPro</Navbar.Brand>
                     <Nav>
-                        <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
+                        {/* <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                             Profile
-                        </Nav.Link>
-                        {/* {!pairingData ?
+                        </Nav.Link> */}
+                        {!pairingData ?
                             <Nav.Link
                                 onClick={connectWallet}
-                                className='navbar--navlink' >
-                                Connect Wallet
+                                className='navbar--navlink ' >
+                                <span className='p-2 cnnct--wllt'>Connect Wallet</span>
                             </Nav.Link>
                             : <>
                                 <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                                     Profile
-                                </Nav.Link> 
+                                </Nav.Link>
                             </>
-                        }  */}
+                        }
 
 
                     </Nav>
