@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { Row, Col, Image, Form, Button, Modal } from 'react-bootstrap'
 import { Counter } from './Counter';
 import './PredictEntry.css'
@@ -6,6 +7,8 @@ import './PredictEntry.css'
 
 
 export const PredictEntry = ({ league, pairingData, connectWallet }) => {
+
+    let { leagueAlias } = useParams();
 
     const [isCompleted, setIsCompleted] = useState(false);
     const [show, setShow] = useState(true);
@@ -23,7 +26,12 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
         setResetKey((preVal) => preVal + 1);
     }
 
-    console.log('PREDITCT');
+    useEffect(() => {
+        setIsCompleted(preVal => false);
+    }, [leagueAlias]);
+
+    console.log("isCompleted Status: " + isCompleted);
+
     return (
         <Col>
             {!isCompleted ?
@@ -33,7 +41,7 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
                         <Image
                             src={league.logo}
                             style={{ maxHeight: "36px" }}
-                            className='ms-3'
+                            className='ms-3 league--logo--entry'
                             fluid />
                     </div>
                     <div className="predict--entry--div">

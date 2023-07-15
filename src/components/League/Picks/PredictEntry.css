@@ -11,6 +11,10 @@
      border-bottom: 0px !important;
  }
 
+ .league--logo--entry {
+     filter: drop-shadow(0px 0px 0.5px #FFFFFF);
+ }
+
  .picks--btn--rst {
      background-color: transparent !important;
      color: #FFFFFF !important;

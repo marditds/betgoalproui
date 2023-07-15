@@ -14,7 +14,7 @@ export const Picks = ({ pairingData, connectWallet }) => {
     let { leagueAlias } = useParams();
     const navigate = useNavigate();
 
-    const league = leagues.find((league) => league.alias === leagueAlias)
+    const league = leagues.find((league) => league.alias === leagueAlias);
 
     // useEffect(() => {
     //     if (!pairingData || !pairingData.accountIds) {
@@ -46,9 +46,12 @@ export const Picks = ({ pairingData, connectWallet }) => {
                                     className='picks--btn'
                                 >
                                     View {league.name}'s Scoreboard
-                                    <Image src={league.logo}
+                                    <Image
+                                        src={league.logo}
                                         style={{ maxHeight: "36px" }}
-                                        className='ms-3' fluid />
+                                        className='ms-3 league--logo--entry'
+                                        fluid
+                                    />
                                 </Link>
                             </Col>
                         </Row>

@@ -144,9 +144,9 @@ function App() {
         </Route>
 
         <Route path='/leagues/:leagueAlias'>
-          <Route path=':clubAlias' element={<Club pairingData={pairingData} />} />
           <Route path='picks' element={<Picks pairingData={pairingData} connectWallet={connectWallet} />} />
           <Route path='scoreboard' element={<Scoreboard pairingData={pairingData} />} />
+          {/* <Route path=':clubAlias' element={<Club pairingData={pairingData} />} /> */}
         </Route>
 
 
