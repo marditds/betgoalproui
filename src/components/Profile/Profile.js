@@ -50,6 +50,10 @@ export const Profile = ({ pairingData, disconnectPairing }) => {
     console.log(userData.username + ", " + userData.firstname + ", " + userData.lastname + ", " + userData.email)
 
     useEffect(() => {
+
+        document.title = 'BetGoalPro | Profile';
+
+
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');
         }

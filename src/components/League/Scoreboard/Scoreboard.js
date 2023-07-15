@@ -19,6 +19,9 @@ export const Scoreboard = ({ pairingData }) => {
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');
         }
+
+        document.title = `BetGoalPro | ${league.name} | Scoreboard`;
+
     }, [pairingData, navigate]
     )
 
@@ -43,7 +46,7 @@ export const Scoreboard = ({ pairingData }) => {
                                     Make Your Picks for {league.name}
                                     <Image src={league.logo}
                                         style={{ maxHeight: "36px" }}
-                                        className='ms-3' fluid />
+                                        className='ms-3 league--logo--chart' fluid />
                                 </Link>
                                 {/* /leagues/Bundesliga/picks */}
                             </Col>

@@ -21,6 +21,10 @@ export const League = ({ pairingData }) => {
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');
         }
+
+        document.title = `BetGoalPro | ${league.name}`;
+
+
     }, [pairingData, navigate]
     )
 

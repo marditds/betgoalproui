@@ -13,7 +13,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                 fixed='bottom' className='navbar--body'
             >
                 <Container>
-                    <Navbar.Brand href="/" className='navbar--logo'>TOTO HBAR</Navbar.Brand>
+                    <Navbar.Brand href="/" className='navbar--logo'>BetGoalPro</Navbar.Brand>
                     <Nav>
                         <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                             Profile

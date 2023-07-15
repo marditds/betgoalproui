@@ -63,6 +63,9 @@ function App() {
   useEffect(() => {
     initHashconnect();
     setIsLoading(false);
+
+    document.title = 'BetGoalPro';
+
   }, []);
 
   if (isLoading) {

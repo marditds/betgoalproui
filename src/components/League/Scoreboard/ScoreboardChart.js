@@ -76,7 +76,7 @@ export const ScoreboardChart = ({ league }) => {
                 <Image
                     src={league.logo}
                     style={{ maxHeight: "36px" }}
-                    className='ms-3'
+                    className='ms-3 league--logo--chart'
                     fluid />
             </div>
 

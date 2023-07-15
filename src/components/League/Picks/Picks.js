@@ -20,6 +20,9 @@ export const Picks = ({ pairingData }) => {
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');
         }
+
+        document.title = `BetGoalPro | ${league.name} | Picks`;
+
     }, [pairingData, navigate]
     )
 

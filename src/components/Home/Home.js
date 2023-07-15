@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Leagues } from './Leagues'
 import { CurrentMatches } from './CurrentMatches'
 import "./Home.css"
 
 export const Home = () => {
+
+    useEffect(() => {
+        document.title = 'BetGoalPro | Home';
+    })
+
     return (
         <div className='home--body'>
             {/* <Row className='d-flex flex-column'> */}
