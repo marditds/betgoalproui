@@ -17,6 +17,11 @@
     transition: 0.3s !important;
 }
 
+.profile--form--control::selection {
+    background-color: black !important;
+    color: #735F32 !important;
+}
+
 .profile--form--control:focus {
     color: white !important;
     background-color: #735F32 !important;

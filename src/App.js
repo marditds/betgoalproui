@@ -4,8 +4,9 @@ import { Routes, Route } from "react-router-dom"
 import { NavMenu } from './components/NavMenu/NavMenu'
 import { HashConnect } from 'hashconnect'
 import { AuthCheck } from './components/AuthCheck/AuthCheck';
-import { ConnectWallet } from './components/ConnectWallet/ConnectWallet';
-import { GuestLogin } from './components/GuestLogin/GuestLogin';
+import { WelcomePage } from './components/WelcomePage/WelcomePage';
+import { ConnectWallet } from './components/WelcomePage/ConnectWallet/ConnectWallet';
+import { GuestLogin } from './components/WelcomePage/GuestLogin/GuestLogin';
 import { Home } from './components/Home/Home'
 import { League } from './components/League/League'
 import { Profile } from './components/Profile/Profile'
@@ -21,6 +22,7 @@ function App() {
   const [guestData, setGuestData] = useState({
     guestName: guestName
   });
+  const [guestNameMsg, setGuestNameMsg] = useState(false)
 
   const handleGuestLogin = (event) => {
     event.preventDefault();
@@ -32,7 +34,10 @@ function App() {
   };
 
   useEffect(() => {
+
     console.log('THIS IS GUEST DATA:', guestData.guestName);
+    console.log('this is guest length: ', guestData.guestName.length);
+
   }, [guestData]);
 
 
@@ -130,10 +135,18 @@ function App() {
             (pairingData || guestData.guestName) ?
               <Home />
               :
-              <>
-                <GuestLogin guestName={guestData.guestName} handleGuestLogin={handleGuestLogin} updateGuestName={updateGuestName} />
-                <ConnectWallet connectWallet={connectWallet} />
-              </>} />
+              <WelcomePage
+                connectWallet={connectWallet}
+                guestName={guestData.guestName}
+                handleGuestLogin={handleGuestLogin}
+                updateGuestName={updateGuestName}
+                guestNameMsg={guestNameMsg}
+              />
+            // <>
+            //   <ConnectWallet connectWallet={connectWallet} />
+            //   <GuestLogin guestName={guestData.guestName} handleGuestLogin={handleGuestLogin} updateGuestName={updateGuestName} />
+            // </>
+          } />
         {/* HOME END */}
 
 
