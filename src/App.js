@@ -5,6 +5,7 @@ import { NavMenu } from './components/NavMenu/NavMenu'
 import { HashConnect } from 'hashconnect'
 import { AuthCheck } from './components/AuthCheck/AuthCheck';
 import { ConnectWallet } from './components/ConnectWallet/ConnectWallet';
+import { GuestLogin } from './components/GuestLogin/GuestLogin';
 import { Home } from './components/Home/Home'
 import { League } from './components/League/League'
 import { Profile } from './components/Profile/Profile'
@@ -15,6 +16,25 @@ import { Club } from './components/Club';
 // import { Picks } from './components/Picks/Picks';
 
 function App() {
+
+  const [guestName, setGuestName] = useState("");
+  const [guestData, setGuestData] = useState({
+    guestName: guestName
+  });
+
+  const handleGuestLogin = (event) => {
+    event.preventDefault();
+    setGuestData({ ...guestData, guestName: guestName });
+  }
+
+  const updateGuestName = (name) => {
+    setGuestName(name);
+  };
+
+  useEffect(() => {
+    console.log('THIS IS GUEST DATA:', guestData.guestName);
+  }, [guestData]);
+
 
   const [hashconnect, setHashconnect] = useState(null);
   const [pairingData, setPairingData] = useState(null);
@@ -91,13 +111,23 @@ function App() {
     <div className="App">
 
       {pairingData ? <NavMenu pairingData={pairingData} connectWallet={connectWallet}
-      // disconnectPairing={disconnectPairing}
+      // disconnectPairing={disconnectPairing} 
       /> : null}
+
+
 
       <Routes>
         {/* <Route path='/' element={chk ? <Home /> : <AuthCheck totoId={totoId} handleChange={handleChange} handleSubmit={handleSubmit} />} /> */}
         {/* <Route path='/' element={pairingData ? <Picks pairingData={pairingData} /> : <ConnectWallet connectWallet={connectWallet} />} /> */}
-        <Route path='/' element={pairingData ? <Home /> : <ConnectWallet connectWallet={connectWallet} />} />
+        <Route path='/'
+          element={
+            (pairingData || guestData.guestName) ?
+              <Home />
+              :
+              <>
+                <GuestLogin guestName={guestData.guestName} handleGuestLogin={handleGuestLogin} updateGuestName={updateGuestName} />
+                <ConnectWallet connectWallet={connectWallet} />
+              </>} />
 
 
 
