@@ -3,4 +3,6 @@
     flex-grow: 1;
     display: grid;
     place-items: center;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }

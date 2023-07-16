@@ -15,6 +15,9 @@ export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, update
                     handleGuestLogin={handleGuestLogin}
                     updateGuestName={updateGuestName}
                     guestNameMsg={guestNameMsg} />
+
+                <div className='text-center'>Hello</div>
+
             </span>
         </Container>
     )
