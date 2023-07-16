@@ -9,7 +9,7 @@
 
 .navbar--navlink {
     color: white !important;
-    transition: 0s !important;
+    transition: 0.3s !important;
 }
 
 .navbar--navlink:hover {
@@ -17,13 +17,23 @@
 }
 
 .cnnct--wllt {
+    background-color: transparent;
     border: 1px solid #FFFFFF;
     border-width: thin;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-.cnnct--wllt:hover {
+.cnnct--wllt:hover,
+.cnnct--wllt:active,
+.cnnct--wllt:focus {
+    color: #735F32 !important;
+    background-color: transparent !important;
     border-color: #735F32 !important;
     transition: 0.3s;
+}
+
+.cnnct--wllt img {
+    max-height: 20px;
+    margin: 0 5px 0 5px;
 }

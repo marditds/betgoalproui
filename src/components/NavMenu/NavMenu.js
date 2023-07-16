@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav, Button, Image } from 'react-bootstrap'
 import './NavMenu.css'
+import hashpackLogo from '../../assets/hashpackLogo.png'
 
 
 export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
@@ -9,33 +10,54 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg"
+            <Navbar collapseOnSelect expand="sm"
                 fixed='bottom' className='navbar--body'
             >
                 <Container>
-                    <Navbar.Brand href="/" className='navbar--logo'>BetGoalPro</Navbar.Brand>
-                    <Nav>
-                        {/* <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
+                    <Navbar.Brand href="/" className='navbar--logo'>
+                        BetGoalPro
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className='ms-auto d-flex align-items-center'>
+                            {/* <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
                             Profile
                         </Nav.Link> */}
-                        {!pairingData ?
-                            <Nav.Link
-                                onClick={connectWallet}
-                                className='navbar--navlink ' >
-                                <span className='p-2 cnnct--wllt'>Connect Wallet</span>
+
+                            <Nav.Link href='/about'
+                                className='navbar--navlink'
+                            >
+                                About
                             </Nav.Link>
-                            : <>
-                                <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
-                                    Profile
+
+                            {!pairingData ?
+                                <Nav.Link
+                                    className='navbar--navlink'
+                                >
+                                    <span className='p-2'>
+                                        <Button onClick={connectWallet}
+                                            className='cnnct--wllt'
+                                        >
+                                            Connect{" "}
+                                            {/* <Image src={hashpackLogo} fluid /> */}
+                                            Wallet
+                                        </Button>
+
+                                    </span>
                                 </Nav.Link>
-                            </>
-                        }
+                                :
+                                <>
+                                    <Nav.Link href='/me' className=' text-lg-start text-end navbar--navlink' >
+                                        Profile
+                                    </Nav.Link>
+                                </>
+                            }
 
 
-                    </Nav>
-
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
-            </Navbar>
+            </Navbar >
         </>
     )
 }

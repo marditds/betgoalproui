@@ -22,11 +22,13 @@ function App() {
   const [guestData, setGuestData] = useState({
     guestName: guestName
   });
-  const [guestNameMsg, setGuestNameMsg] = useState(false)
+  const [guestNameMsg, setGuestNameMsg] = useState(false);
+  const [guestCheck, setGuestCheck] = useState(false);
 
   const handleGuestLogin = (event) => {
     event.preventDefault();
-    setGuestData({ ...guestData, guestName });
+    // setGuestData({ ...guestData, guestName });
+    setGuestCheck(preVal => true);
   }
 
   const updateGuestName = (name) => {
@@ -116,7 +118,8 @@ function App() {
     <div className="App">
 
       {
-        (pairingData || guestData.guestName)
+        // (pairingData || guestData.guestName)
+        (pairingData || guestCheck)
           ?
           <NavMenu pairingData={pairingData} connectWallet={connectWallet}
           // disconnectPairing={disconnectPairing} 
@@ -132,7 +135,8 @@ function App() {
         {/* HOME START */}
         <Route path='/'
           element={
-            (pairingData || guestData.guestName) ?
+            // (pairingData || guestData.guestName) ?
+            (pairingData || guestCheck) ?
               <Home />
               :
               <WelcomePage

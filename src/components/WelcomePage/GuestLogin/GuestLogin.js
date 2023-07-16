@@ -24,26 +24,25 @@ export const GuestLogin = ({ guestName, handleGuestLogin, updateGuestName }) => 
 
     return (
         <Container className='guest--login--body'>
-            <Form>
-                <Form.Group className="mb-3" controlId="guestName">
+            {/* <Form> */}
+            {/* <Form.Group className="mb-3" controlId="guestName">
                     <Form.Label>Guest Name</Form.Label>
                     <Form.Control
                         type="name"
                         value={gName}
                         onChange={onGuestNameChange}
                         placeholder="Name"
-                        className='input--field' />
-                    {/* <Form.Text className={showMsg ? 'd-inline' : 'd-none'}>Please type in your name.</Form.Text> */}
-                </Form.Group>
+                        className='input--field' /> 
+                </Form.Group> */}
 
-                <Button
-                    variant="primary"
-                    type="submit"
-                    onClick={handleGuestLogin}
-                    className='guest--lgn--btn'>
-                    Continue as a Guest
-                </Button>
-            </Form>
+            <Button
+                variant="primary"
+                type="submit"
+                onClick={handleGuestLogin}
+                className='guest--lgn--btn'>
+                Continue as a Guest
+            </Button>
+            {/* </Form> */}
         </Container>
     )
 }
