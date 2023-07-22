@@ -47,7 +47,7 @@ export const Profile = ({ pairingData, disconnectPairing, guestData }) => {
     };
 
     useEffect(() => {
-        document.title = 'BetGoalPro | Profile';
+        document.title = 'Profile | BetGoalPro ';
         console.log('Guest Name:', guestData.guestName);
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');

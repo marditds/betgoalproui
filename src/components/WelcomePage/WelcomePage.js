@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './WelcomePage.css';
 import { ConnectWallet } from './ConnectWallet/ConnectWallet';
 import { GuestLogin } from './GuestLogin/GuestLogin';
 
 export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, updateGuestName, guestNameMsg }) => {
+
+    useEffect(() => {
+        document.title = 'Welcome | BetGoalPro';
+    })
+
     return (
         <Container className='welcome--body'>
             <span className='w-100 welcome--btns'>

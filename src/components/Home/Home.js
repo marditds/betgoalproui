@@ -6,7 +6,7 @@ import "./Home.css"
 export const Home = () => {
 
     useEffect(() => {
-        document.title = 'BetGoalPro | Home';
+        document.title = 'Home | BetGoalPro';
     })
 
     return (

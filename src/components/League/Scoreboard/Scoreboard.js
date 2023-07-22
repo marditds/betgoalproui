@@ -15,6 +15,10 @@ export const Scoreboard = ({ pairingData }) => {
 
     const league = leagues.find((league) => league.alias === leagueAlias);
 
+    useEffect(() => {
+        document.title = `Scoreboard | ${league.name} | BetGoalPro`;
+    })
+
     // useEffect(() => {
     //     if (!pairingData || !pairingData.accountIds) {
     //         navigate('/');

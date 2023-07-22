@@ -16,6 +16,10 @@ export const Picks = ({ pairingData, connectWallet }) => {
 
     const league = leagues.find((league) => league.alias === leagueAlias);
 
+    useEffect(() => {
+        document.title = `Picks | ${league.name} | BetGoalPro`;
+    })
+
     // useEffect(() => {
     //     if (!pairingData || !pairingData.accountIds) {
     //         navigate('/');

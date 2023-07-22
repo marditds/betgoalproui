@@ -17,6 +17,10 @@ export const League = ({ pairingData }) => {
 
     console.log(league.clubs);
 
+    useEffect(() => {
+        document.title = `${league.name} | BetGoalPro`;
+    })
+
     // useEffect(() => {
     //     if (!pairingData || !pairingData.accountIds) {
     //         navigate('/');
