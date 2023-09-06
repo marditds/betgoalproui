@@ -12,7 +12,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
     const [show, setShow] = useState(false);
 
     const handleShow = () => setShow(true);
-    const handleOk = () => setShow(false);
+    const handleClose = () => setShow(false);
 
     return (
         <>
@@ -20,13 +20,15 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
 
             {show ?
                 // <Container className='w-100'>
-                <div className='mt-1 position-absolute w-100' style={{ zIndex: '9999', bottom: '8vh' }}>
+                <div className='mt-1 position-fixed w-100' style={{ zIndex: '9999', bottom: '0px' }}>
                     <BrowserDetection
                         detectionMsg={
                             <div className='w-100 d-flex'>
                                 To connect your wallet, please use Chrome.
 
-                                <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }} onClick={handleOk}>Ok</span>
+                                <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }}>
+                                    <GrClose onClick={handleClose} />
+                                </span>
                             </div>
                         } />
                 </div>

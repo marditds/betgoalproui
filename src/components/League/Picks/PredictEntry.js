@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Row, Col, Image, Form, Button, Modal } from 'react-bootstrap'
 import { Counter } from './Counter';
-import './PredictEntry.css'
+import './PredictEntry.css';
+import { isChrome } from 'react-device-detect';
+import { BrowserDetection } from '../../BrowserDetection/BrowserDetection';
+import { GrClose } from 'react-icons/gr';
 
 
 
@@ -14,6 +17,8 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
     const [show, setShow] = useState(true);
     const [value, setValue] = useState(0);
     const [resetKey, setResetKey] = useState(0);
+
+    const [showErrMsg, setShowErrMsg] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -31,6 +36,9 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
     }, [leagueAlias]);
 
     console.log("isCompleted Status: " + isCompleted);
+
+    const handleShow = () => setShowErrMsg(true);
+    const handleClose = () => setShowErrMsg(false);
 
     return (
         <Col>
@@ -242,12 +250,32 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
                                 <Button
                                     type={!pairingData ? "button" : "submit"}
                                     className="picks--btn--smbt"
-                                    onClick={!pairingData ? connectWallet : handleSubmit}>
+                                    onClick={
+                                        !pairingData ?
+                                            (isChrome ? connectWallet : handleShow)
+                                            : handleSubmit}>
                                     Submit
                                 </Button>
-                                {/* } */}
+
+                                <div className='position-absolute' style={{ marginTop: "-15px", marginLeft: "24px", marginRight: "-17px" }}>
+                                    {showErrMsg ?
+                                        <BrowserDetection
+                                            detectionMsg={
+                                                <div className='w-100 d-flex'>
+                                                    To submit, please connect your wallet using Chrome.
+
+                                                    <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }}>
+                                                        <GrClose onClick={handleClose} />
+                                                    </span>
+                                                </div>
+                                            } />
+                                        : null
+                                    }
+                                </div>
 
                             </div>
+
+
                         </Form>
                     </div>
                 </>
