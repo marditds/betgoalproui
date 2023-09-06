@@ -24,7 +24,7 @@ export const ConnectWallet = ({ connectWallet }) => {
                         style={{ maxWidth: "1272px", zIndex: "9999", }}>
                         <BrowserDetection
                             detectionMsg={<div className='d-flex w-100'>
-                                To connect your wallet, please use Chrome.
+                                To connect your wallet, please use Chrome's HashPack™ extension.
 
                                 <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }}>
                                     <GrClose onClick={handleClose} />

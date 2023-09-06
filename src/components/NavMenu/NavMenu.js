@@ -24,7 +24,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                     <BrowserDetection
                         detectionMsg={
                             <div className='w-100 d-flex'>
-                                To connect your wallet, please use Chrome.
+                                To connect your wallet, please use Chrome's HashPack™ extension.
 
                                 <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }}>
                                     <GrClose onClick={handleClose} />

@@ -262,7 +262,7 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
                                         <BrowserDetection
                                             detectionMsg={
                                                 <div className='w-100 d-flex'>
-                                                    To submit, please connect your wallet using Chrome.
+                                                    To submit, please connect your wallet using Chrome's HashPack™ extension.
 
                                                     <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }}>
                                                         <GrClose onClick={handleClose} />
