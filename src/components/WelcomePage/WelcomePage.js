@@ -3,6 +3,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './WelcomePage.css';
 import { ConnectWallet } from './ConnectWallet/ConnectWallet';
 import { GuestLogin } from './GuestLogin/GuestLogin';
+import { BrowserDetection } from '../BrowserDetection/BrowserDetection';
+import { isChrome } from 'react-device-detect';
+
 
 export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, updateGuestName, guestNameMsg }) => {
 
@@ -12,6 +15,11 @@ export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, update
 
     return (
         <Container className='welcome--body'>
+
+            <div className='position-absolute' style={{ marginTop: '-500px', textAlign: 'left', paddingLeft: '12px', paddingRight: '12px', }}>
+                <BrowserDetection detectionMsg={"To connect your wallet, please use Chrome."} />
+            </div>
+
             <span className='w-100 welcome--btns'>
                 <ConnectWallet
                     connectWallet={connectWallet} />

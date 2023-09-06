@@ -1,15 +1,40 @@
-import React from 'react'
-import { Container, Navbar, Nav, Button, Image } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Navbar, Nav, Button, Image, Modal } from 'react-bootstrap'
 import './NavMenu.css'
 import hashpackLogo from '../../assets/hashpackLogo.png'
+import { isChrome } from 'react-device-detect';
+import { BrowserDetection } from '../BrowserDetection/BrowserDetection';
+import { GrClose } from 'react-icons/gr';
 
 
 export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
 
+    const [show, setShow] = useState(false);
 
+    const handleShow = () => setShow(true);
+    const handleOk = () => setShow(false);
 
     return (
         <>
+
+
+            {show ?
+                // <Container className='w-100'>
+                <div className='mt-1 position-absolute w-100' style={{ zIndex: '9999', bottom: '8vh' }}>
+                    <BrowserDetection
+                        detectionMsg={
+                            <div className='w-100 d-flex'>
+                                To connect your wallet, please use Chrome.
+
+                                <span className='mt-auto ms-auto me-sm-4 me-3' style={{ cursor: 'pointer' }} onClick={handleOk}>Ok</span>
+                            </div>
+                        } />
+                </div>
+                // </Container>
+                : null
+            }
+
+
             <Navbar collapseOnSelect expand="sm"
                 fixed='bottom' className='navbar--body'
             >
@@ -35,7 +60,7 @@ export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
                                 className='navbar--navlink'
                             >
                                 <span className='p-2'>
-                                    <Button onClick={connectWallet}
+                                    <Button onClick={!isChrome ? handleShow : connectWallet}
                                         className='cnnct--wllt'
                                     >
                                         Connect{" "}
