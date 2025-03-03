@@ -3,17 +3,17 @@ import React, { useState, useEffect } from 'react'
 import { Routes, Route } from "react-router-dom"
 import { NavMenu } from './components/NavMenu/NavMenu'
 import { HashConnect } from 'hashconnect'
-import { AuthCheck } from './components/AuthCheck/AuthCheck';
+// import { AuthCheck } from './components/AuthCheck/AuthCheck';
 import { WelcomePage } from './components/WelcomePage/WelcomePage';
-import { ConnectWallet } from './components/WelcomePage/ConnectWallet/ConnectWallet';
-import { GuestLogin } from './components/WelcomePage/GuestLogin/GuestLogin';
+// import { ConnectWallet } from './components/WelcomePage/ConnectWallet/ConnectWallet';
+// import { GuestLogin } from './components/WelcomePage/GuestLogin/GuestLogin';
 import { Home } from './components/Home/Home'
 import { League } from './components/League/League'
 import { Profile } from './components/Profile/Profile'
 import { NotFound } from './components/404/NotFound';
 import { Picks } from './components/League/Picks/Picks';
 import { Scoreboard } from './components/League/Scoreboard/Scoreboard';
-import { Club } from './components/Club';
+// import { Club } from './components/Club';
 // import { Picks } from './components/Picks/Picks';
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
 
   useEffect(() => {
 
-    console.log('THIS IS GUEST DATA:', guestData.guestName);
-    console.log('this is guest length: ', guestData.guestName.length);
+    // console.log('THIS IS GUEST DATA:', guestData.guestName);
+    // console.log('this is guest length: ', guestData.guestName.length);
 
   }, [guestData]);
 
@@ -61,7 +61,7 @@ function App() {
     setHashconnect(hc);
 
     hc.pairingEvent.on((pairingData) => {
-      console.log('Pairing data:', pairingData);
+      // console.log('Pairing data:', pairingData);
       localStorage.setItem("pairingData", JSON.stringify(pairingData));
       setPairingData(pairingData);
     });
@@ -72,7 +72,7 @@ function App() {
     }
 
     const initData = await hc.init(appMetadata, "testnet", false);
-    console.log('Init data:', initData);
+    // console.log('Init data:', initData);
   };
 
   const connectWallet = () => {
@@ -82,7 +82,7 @@ function App() {
   const disconnectPairing = (pairing) => {
     hashconnect.disconnect(pairing.topic);
     const updatedPairings = hashconnect.hcData.savedPairings;
-    console.log('Updated pairings:', updatedPairings);
+    // console.log('Updated pairings:', updatedPairings);
     localStorage.removeItem("pairingData");
     setPairingData(null);
   };
@@ -112,7 +112,7 @@ function App() {
   }
 
 
-  console.log('THIS IS HOME DATA: ', pairingData);
+  // console.log('THIS IS HOME DATA: ', pairingData);
 
   return (
     <div className="App">
