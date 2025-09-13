@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './WelcomePage.css';
 import { ConnectWallet } from './ConnectWallet/ConnectWallet';
 import { GuestLogin } from './GuestLogin/GuestLogin';
-import { BrowserDetection } from '../BrowserDetection/BrowserDetection';
-import { isChrome } from 'react-device-detect';
-import { GrClose } from 'react-icons/gr';
+// import { BrowserDetection } from '../BrowserDetection/BrowserDetection';
+// import { isChrome } from 'react-device-detect';
+// import { GrClose } from 'react-icons/gr';
 
 export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, updateGuestName, guestNameMsg }) => {
 
 
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
 
-    const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
+    // const handleClose = () => setShow(false);
 
 
     useEffect(() => {
@@ -41,6 +41,7 @@ export const WelcomePage = ({ connectWallet, guestName, handleGuestLogin, update
 
             <span className='w-100 welcome--btns'>
                 <ConnectWallet
+                    // connectWallet={connectWallet}
                     connectWallet={connectWallet} />
                 <GuestLogin
                     guestName={guestName}

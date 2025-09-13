@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Container, Navbar, Nav, Button, Image, Modal } from 'react-bootstrap'
+import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 import './NavMenu.css'
-import hashpackLogo from '../../assets/hashpackLogo.png'
+// import hashpackLogo from '../../assets/hashpackLogo.png'
 import { isChrome } from 'react-device-detect';
 import { BrowserDetection } from '../BrowserDetection/BrowserDetection';
 import { GrClose } from 'react-icons/gr';
 
-
-export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
+// export const NavMenu = ({ pairingData, connectWallet, disconnectPairing }) => {
+export const NavMenu = ({ pairingData, connectWallet }) => {
 
     const [show, setShow] = useState(false);
 

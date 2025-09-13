@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap';
 import { Back } from '../Back-Btn/Back';
 import './Profile.css';
-import profPic from '../../assets/100x100.png';
+// import profPic from '../../assets/100x100.png';
 
 export const Profile = ({ pairingData, disconnectPairing, guestData }) => {
     const navigate = useNavigate();
@@ -12,18 +12,18 @@ export const Profile = ({ pairingData, disconnectPairing, guestData }) => {
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
-    const [avatar, setAvatar] = useState(profPic);
+    // const [avatar, setAvatar] = useState(profPic);
 
     const [userData, setUserData] = useState({
         username: username,
         firstname: firstname,
         lastname: lastname,
         email: email,
-        avatar: avatar
+        // avatar: avatar
     });
 
-    const [trackRecord, setTrackRecord] = useState("trackrecord");
-    const [balance, setBalance] = useState(0);
+    // const [trackRecord, setTrackRecord] = useState("trackrecord");
+    // const [balance, setBalance] = useState(0);
 
     const onUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -48,7 +48,7 @@ export const Profile = ({ pairingData, disconnectPairing, guestData }) => {
 
     useEffect(() => {
         document.title = 'Profile | BetGoalPro ';
-        console.log('Guest Name:', guestData.guestName);
+        // console.log('Guest Name:', guestData.guestName);
         if (!pairingData || !pairingData.accountIds) {
             navigate('/');
         }
@@ -67,9 +67,9 @@ export const Profile = ({ pairingData, disconnectPairing, guestData }) => {
                     </Col>
                     <Col className='d-flex flex-column text-md-start text-center'>
                         <Col><h4>{userData.username}</h4></Col>
-                        <Col>Account Balance: {balance} HBAR</Col>
+                        {/* <Col>Account Balance: {balance} HBAR</Col> */}
                         <Col>Wallet ID: {pairingData?.accountIds}</Col>
-                        <Col>{trackRecord}Winnign Streak</Col>
+                        {/* <Col>{trackRecord}Winnign Streak</Col> */}
                     </Col>
                 </Row>
                 <Row className='flex-column'>

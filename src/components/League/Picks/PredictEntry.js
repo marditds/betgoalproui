@@ -252,7 +252,7 @@ export const PredictEntry = ({ league, pairingData, connectWallet }) => {
                                     className="picks--btn--smbt"
                                     onClick={
                                         !pairingData ?
-                                            (isChrome ? connectWallet : handleShow)
+                                            (isChrome ? handleSubmit : handleShow)
                                             : handleSubmit}>
                                     Submit
                                 </Button>

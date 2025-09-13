@@ -1,8 +1,8 @@
 import './App.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
 import { NavMenu } from './components/NavMenu/NavMenu'
-import { HashConnect } from 'hashconnect'
+// import { HashConnect } from 'hashconnect'
 // import { AuthCheck } from './components/AuthCheck/AuthCheck';
 import { WelcomePage } from './components/WelcomePage/WelcomePage';
 // import { ConnectWallet } from './components/WelcomePage/ConnectWallet/ConnectWallet';
@@ -18,98 +18,94 @@ import { Scoreboard } from './components/League/Scoreboard/Scoreboard';
 
 function App() {
 
-  const [guestName, setGuestName] = useState("");
-  const [guestData, setGuestData] = useState({
-    guestName: guestName
-  });
-  const [guestNameMsg, setGuestNameMsg] = useState(false);
+  // const [guestName, setGuestName] = useState("");
+  // const [guestData, setGuestData] = useState({
+  //   guestName: guestName
+  // });
+  // const [guestNameMsg, setGuestNameMsg] = useState(false);
   const [guestCheck, setGuestCheck] = useState(false);
 
   const handleGuestLogin = (event) => {
     event.preventDefault();
     // setGuestData({ ...guestData, guestName });
-    setGuestCheck(preVal => true);
+    setGuestCheck(true);
   }
 
-  const updateGuestName = (name) => {
-    setGuestName(name);
-  };
-
-  useEffect(() => {
-
-    // console.log('THIS IS GUEST DATA:', guestData.guestName);
-    // console.log('this is guest length: ', guestData.guestName.length);
-
-  }, [guestData]);
+  // const updateGuestName = (name) => {
+  //   setGuestName(name);
+  // };
 
 
-  const [hashconnect, setHashconnect] = useState(null);
+
+
+  // const [hashconnect, setHashconnect] = useState(null);
   const [pairingData, setPairingData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [chk, setChk] = useState(false);
-  const [totoId, setTotoId] = useState('');
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [chk, setChk] = useState(false);
+  // const [totoId, setTotoId] = useState('');
 
 
-  const appMetadata = {
-    name: "football",
-    description: "predict results",
-    url: "http://localhost:3000/"
-  };
+  // const appMetadata = {
+  //   name: "football",
+  //   description: "predict results",
+  //   url: "http://localhost:3000/"
+  // };
 
-  const initHashconnect = async () => {
-    const hc = new HashConnect();
-    setHashconnect(hc);
+  // const initHashconnect = async () => {
+  //   const hc = new HashConnect();
+  //   setHashconnect(hc);
 
-    hc.pairingEvent.on((pairingData) => {
-      // console.log('Pairing data:', pairingData);
-      localStorage.setItem("pairingData", JSON.stringify(pairingData));
-      setPairingData(pairingData);
-    });
+  //   hc.pairingEvent.on((pairingData) => {
+  //     // console.log('Pairing data:', pairingData);
+  //     localStorage.setItem("pairingData", JSON.stringify(pairingData));
+  //     setPairingData(pairingData);
+  //   });
 
-    const savedPairingData = localStorage.getItem("pairingData");
-    if (savedPairingData) {
-      setPairingData(JSON.parse(savedPairingData));
-    }
+  //   const savedPairingData = localStorage.getItem("pairingData");
+  //   if (savedPairingData) {
+  //     setPairingData(JSON.parse(savedPairingData));
+  //   }
 
-    const initData = await hc.init(appMetadata, "testnet", false);
-    // console.log('Init data:', initData);
-  };
+  //   const initData = await hc.init(appMetadata, "testnet", false);
+  //   // console.log('Init data:', initData);
+  // };
 
   const connectWallet = () => {
-    hashconnect.connectToLocalWallet();
+    //   hashconnect.connectToLocalWallet();
+    console.log('Connect wallet clicked.');
   };
 
   const disconnectPairing = (pairing) => {
-    hashconnect.disconnect(pairing.topic);
-    const updatedPairings = hashconnect.hcData.savedPairings;
+    // hashconnect.disconnect(pairing.topic);
+    // const updatedPairings = hashconnect.hcData.savedPairings;
     // console.log('Updated pairings:', updatedPairings);
     localStorage.removeItem("pairingData");
     setPairingData(null);
   };
 
-  useEffect(() => {
-    initHashconnect();
-    setIsLoading(false);
+  // useEffect(() => {
+  //   initHashconnect();
+  //   setIsLoading(false);
 
-    document.title = 'BetGoalPro';
+  //   document.title = 'BetGoalPro';
 
-  }, []);
+  // }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  const handleChange = (e) => {
-    setTotoId(preVal => e.target.value);
-  }
+  // const handleChange = (e) => {
+  //   setTotoId(preVal => e.target.value);
+  // }
 
-  const handleSubmit = () => {
-    if (totoId === '123') {
-      setChk(preVal => true);
-    } else {
-      setChk(preVal => false);
-    }
-  }
+  // const handleSubmit = () => {
+  //   if (totoId === '123') {
+  //     setChk(preVal => true);
+  //   } else {
+  //     setChk(preVal => false);
+  //   }
+  // }
 
 
   // console.log('THIS IS HOME DATA: ', pairingData);
@@ -121,7 +117,9 @@ function App() {
         // (pairingData || guestData.guestName)
         (pairingData || guestCheck)
           ?
-          <NavMenu pairingData={pairingData} connectWallet={connectWallet}
+          <NavMenu pairingData={pairingData}
+            connectWallet={handleGuestLogin}
+          // connectWallet={connectWallet}
           // disconnectPairing={disconnectPairing} 
           />
           : null}
@@ -140,11 +138,11 @@ function App() {
               <Home />
               :
               <WelcomePage
-                connectWallet={connectWallet}
-                guestName={guestData.guestName}
+                connectWallet={handleGuestLogin}
+                // guestName={guestData.guestName}
                 handleGuestLogin={handleGuestLogin}
-                updateGuestName={updateGuestName}
-                guestNameMsg={guestNameMsg}
+              // updateGuestName={updateGuestName}
+              // guestNameMsg={guestNameMsg}
               />
             // <>
             //   <ConnectWallet connectWallet={connectWallet} />
@@ -169,7 +167,9 @@ function App() {
 
         {/* REDIRECT */}
         {/* {pairingData &&  */}
-        <Route path='me' element={<Profile pairingData={pairingData} disconnectPairing={disconnectPairing} guestData={guestData} />} />
+        <Route path='me' element={<Profile pairingData={pairingData} disconnectPairing={disconnectPairing}
+        // guestData={guestData} 
+        />} />
         {/* } */}
 
         <Route path='*' element={<NotFound />} />
